@@ -5,6 +5,8 @@
 
     @include('site.sections.slideshow')
 
+    @include('site.sections.introducing-services')
+
     @include('site.sections.projects')
 
     @include('site.sections.experience')
