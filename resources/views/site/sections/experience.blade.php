@@ -1,13 +1,18 @@
-<section class="pt-6" id="pricingTable">
+<section class="my-5" id="pricingTable">
     <div class="container">
         <div class="row">
             <div class="col-8">
                 <img class="rounded-3" width="100%" src="" alt="">
-              <h1>  عکس یک ویدئو که به ویدئو آپارات لینک بشه</h1>
+                <h1> عکس یک ویدئو که به ویدئو آپارات لینک بشه</h1>
+                <div class="card rounded-3 card-span shadow">
+                    <img height="800px"
+                         src="https://dl.musicalacademy.ir/musicalacademy/storage/photos/videocourses/guitarLesonMohammadAfshar.jpg"
+                         alt="">
+                </div>
             </div>
             <div class="col-4">
                 <div class="col-12 mb-3" onmouseover="testFakhi(1)" onmouseleave="testFakhi2(1)" id="expBox1">
-                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
+                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1">
                         <div class="card-body">
                             <div class="text-center"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
                                 <h3 class="mt-2">تجربه و تخصص</h3>
@@ -19,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-12 mb-3" onmouseover="testFakhi(2)" onmouseleave="testFakhi2(2)" id="expBox2">
-                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
+                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1">
                         <div class="card-body">
                             <div class="text-center"><i class="fa fa-users fa-2x" aria-hidden="true"></i>
                                 <h3 class="mt-2">کار تیمی مؤثر</h3>
@@ -32,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-12 mb-3" onmouseover="testFakhi(3)" onmouseleave="testFakhi2(3)" id="expBox3">
-                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary">
+                    <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1">
                         <div class="card-body">
                             <div class="text-center"><i class="fa fa-handshake fa-2x" aria-hidden="true"></i>
                                 <h5 class="mt-3">رضایت مشتری</h5>
