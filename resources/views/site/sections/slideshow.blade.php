@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="bg-danger overflow-hidden" style="border-radius: 30px">
+<div class="container my-3">
+    <div class="bg-primary-1 overflow-hidden" style="border-radius: 30px">
         <div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 @foreach($slideShows as $key=> $slideShow)
@@ -28,12 +28,12 @@
                     </div>
                 @endforeach
             </div>
-            <button class="carousel-control-prev bg-primary-1 rounded-circle" type="button" data-bs-target="#carouselExampleDark1"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark1"
                     data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next bg-primary-1 rounded-circle" type="button" data-bs-target="#carouselExampleDark1"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark1"
                     data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
