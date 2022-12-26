@@ -3,30 +3,14 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-
-
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ارم صنعت موج گستر - دانش بنیان</title>
-
-
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicons/favicon.ico')}}">
     <meta name="theme-color" content="#ccffff">
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet"/>
-    <link href="{{asset('css/lightbox.css')}}" rel="stylesheet"/>
-
+    <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
 </head>
-
-
 <body>
 <main class="main" id="top">
     @include('site.sections.navbar')
@@ -37,7 +21,7 @@
         <div class="container">
             <div class="row align-items-center min-vh-10 min-vh-sm-5">
                 <div class="col-md-5 col-lg-6 order-0 order-md-1">
-                    <img class="w-55" src="{{asset('img/illustrations/esmg.png')}}" alt="ارم صنعت موج گستر"/>
+                    <img class="img-fluid w-55" src="{{asset('img/illustrations/esmg.png')}}" alt="ارم صنعت موج گستر"/>
                 </div>
                 <div class="col-md-7 col-lg-6 text-md-start text-center">
                     <h1 class="text-light fs-md-5 fs-lg-6">ارم صنعت موج گستر</h1>
@@ -98,7 +82,7 @@
 <!--    JavaScripts-->
 <!-- ===============================================-->
 
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('js/site.js')}}"></script>
 @yield('script')
 </body>
 

@@ -11,10 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-]) .sass('resources/css/lightbox.scss', 'public/css')
-.js('resources/js/admin/admin.js', 'public/js')
-  .sass('resources/scss/admin/admin.scss', 'public/css');
+mix.js('resources/js/site/site.js', 'public/js')
+    .css('resources/css/site/site.css', 'public/css')
+    .js('resources/js/admin/admin.js', 'public/js')
+    .sass('resources/scss/admin/admin.scss', 'public/css');
