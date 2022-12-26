@@ -9,11 +9,11 @@
     <div class="carousel-inner">
         @foreach($slideShows as $slideShow)
             <div class="carousel-item @if($loop->first) active @endif" data-bs-interval="{{$slideShow->interval}}"
-                 style="height: 250px">
+                 style="height: 500px">
                 <img src="{{$slideShow->images->url}}" class="d-block slide-show-img-fix"
-                     alt="{{$slideShow->title}}" style="opacity: 0.5">
+                     alt="{{$slideShow->title}}" style="opacity: 0.7">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-                     style="background: rgba(0, 0,0, 0.7);">
+                     style="background: rgba(0, 0,0, 0.5);">
                     <div class="carousel-caption">
                         <h1 class="text-white sm-small">{{$slideShow->title}}</h1>
                         <p class="text-center text-light sm-small">{{$slideShow->description}}</p>

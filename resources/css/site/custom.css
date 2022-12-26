@@ -45,3 +45,39 @@ body, h1, h2, h3, h4, h5, h6, a {
 a.navbar-brand {
     color: #454545
 }
+
+@media (max-width: 576px) {
+    .slide-show-img-fix {
+        display: block;
+        width: 100% !important;
+        height: 220px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-show-img-fix {
+        display: block;
+        width: 100% !important;
+        height: 400px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 769px) {
+    .slide-show-img-fix {
+        display: block;
+        width: 100% !important;
+        height: 550px;
+        overflow: hidden;
+    }
+}
+
+@media (min-width: 992px) {
+    .slide-show-img-fix {
+        display: block;
+        width: 100% !important;
+        height: 720px;
+        overflow: hidden;
+    }
+}

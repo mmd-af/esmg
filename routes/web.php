@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProjectController;
 
-Route::get('/', [ProjectController::class, 'show'])->name('homepage');
+//Route::get('/', [ProjectController::class, 'show'])->name('homepage');
 // Route::get('/', function () {
 //     return view('home.index');
 // })->name('homepage');

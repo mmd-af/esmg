@@ -14,23 +14,6 @@
 <body>
 <main class="main" id="top">
     @include('site.sections.navbar')
-    <section id="home">
-        <div class="bg-holder"
-             style="background-image:url('img/gallery/hero-header.png');background-position:center;background-size:cover;">
-        </div>
-        <div class="container">
-            <div class="row align-items-center min-vh-10 min-vh-sm-5">
-                <div class="col-md-5 col-lg-6 order-0 order-md-1">
-                    <img class="img-fluid w-55" src="{{asset('img/illustrations/esmg.png')}}" alt="ارم صنعت موج گستر"/>
-                </div>
-                <div class="col-md-7 col-lg-6 text-md-start text-center">
-                    <h1 class="text-light fs-md-5 fs-lg-6">ارم صنعت موج گستر</h1>
-                    <p class="text-light">دانش بنیان</p><a class="btn btn-outline-secondary" href="#" role="button">پروژه
-                        ها</a>
-                </div>
-            </div>
-        </div>
-    </section>
     @yield('content')
     <section class="py-0 py-xxl-6" id="help">
         <div class="bg-holder"
@@ -73,17 +56,7 @@
         </div>
     </section>
 </main>
-<!-- ===============================================-->
-<!--    End of Main Content-->
-<!-- ===============================================-->
-
-
-<!-- ===============================================-->
-<!--    JavaScripts-->
-<!-- ===============================================-->
-
 <script src="{{asset('js/site.js')}}"></script>
 @yield('script')
 </body>
-
 </html>

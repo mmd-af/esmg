@@ -3,6 +3,8 @@
 
 @section('content')
 
+    @include('site.sections.slideshow')
+
     @include('site.sections.projects')
 
     @include('site.sections.experience')
