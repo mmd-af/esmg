@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light sticky-top bg-secondary-1" id="neubar">
     <div class="container">
-        <a class="navbar-brand" href="#"><img src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
+        <a class="navbar-brand" href="{{route('home.index')}}"><img onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -8,7 +8,7 @@
         <div class=" collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto ">
                 <li class="nav-item">
-                    <a class="nav-link mx-2 active" aria-current="page" href="#">خانه</a>
+                    <a class="nav-link mx-2 active" aria-current="page" href="{{route('home.index')}}">خانه</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mx-2" href="#">Products</a>

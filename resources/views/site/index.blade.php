@@ -9,6 +9,8 @@
 
     @include('site.sections.experience')
 
+    @include('site.sections.projects1')
+
     @include('site.sections.projects')
 
     @include('site.sections.laboratory')

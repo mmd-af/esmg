@@ -6,13 +6,16 @@
                     <h1>چرا ارم صنعت موج گستر...؟</h1>
                     <img style="border-radius: 30px" height="800px"
                          src="https://dl.musicalacademy.ir/musicalacademy/storage/photos/videocourses/guitarLesonMohammadAfshar.jpg"
+                         onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)"
                          alt="">
                 </div>
             </div>
             <div class="col-sm-12 col-lg-4">
                 <div class="row">
-                    <div class="col-sm-12 mb-3" onmouseover="testFakhi(1)" onmouseleave="testFakhi2(1)" id="expBox1">
-                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1" style="border-radius: 30px">
+                    <div class="col-sm-12 mb-3" onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)"
+                         id="expBox">
+                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1"
+                             style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
                                     <h3 class="mt-2">تجربه و تخصص</h3>
@@ -24,8 +27,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 mb-3" onmouseover="testFakhi(2)" onmouseleave="testFakhi2(2)" id="expBox2">
-                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1" style="border-radius: 30px">
+                    <div class="col-sm-12 mb-3" onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)"
+                         id="expBox">
+                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1"
+                             style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-users fa-2x" aria-hidden="true"></i>
                                     <h3 class="mt-2">کار تیمی مؤثر</h3>
@@ -38,8 +43,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 mb-3" onmouseover="testFakhi(3)" onmouseleave="testFakhi2(3)" id="expBox3">
-                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1" style="border-radius: 30px">
+                    <div class="col-sm-12 mb-3" onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)"
+                         id="expBox">
+                        <div class="card card-span shadow py-4 h-100 border-top border-4 border-primary-1"
+                             style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-handshake fa-2x" aria-hidden="true"></i>
                                     <h5 class="mt-3">رضایت مشتری</h5>
@@ -57,17 +64,3 @@
         </div>
     </div>
 </section>
-@section('script')
-    <script>
-        function testFakhi(id) {
-            let expBox = document.getElementById(`expBox${id}`);
-            // expBox.style.transitionDelay= '250ms';
-            expBox.style.scale = 1.1;
-        }
-
-        function testFakhi2(id) {
-            let expBox = document.getElementById(`expBox${id}`);
-            expBox.style.scale = 1;
-        }
-    </script>
-@endsection

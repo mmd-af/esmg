@@ -20,7 +20,7 @@ class AdminTeach
         if (Auth::check() && Auth::user()->rolls == 'admin') {
   return $next($request);
 }
-return redirect()->route('homepage');
+return redirect()->route('home.index');
 
     }
 }

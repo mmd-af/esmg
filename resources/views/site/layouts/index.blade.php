@@ -57,6 +57,14 @@
     </section>
 </main>
 <script src="{{asset('js/site.js')}}"></script>
+<script>
+    function zoomIn(id) {
+        id.style.scale = 1.1
+    }
+    function zoomOut(id) {
+        id.style.scale = 1
+    }
+</script>
 @yield('script')
 </body>
 </html>
