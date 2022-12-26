@@ -2,6 +2,7 @@
 <html lang="fa" dir="rtl">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -49,8 +50,7 @@
             <hr/>
             <div class="row flex-center pb-3">
                 <div class="col-md-6 order-0">
-                    <p class="text-200 text-center text-md-start">Copyright &copy; esmg.co.ir 2021 - Powered by <a
-                            href="https://fourpluse.ir" target="_blank">fourpluse.ir</p>
+                    <p class="text-200 text-center text-md-start">Copyright &copy; esmg.co.ir 2022 </p>
                 </div>
             </div>
         </div>
@@ -58,9 +58,37 @@
 </main>
 <script src="{{asset('js/site.js')}}"></script>
 <script>
+    window.addEventListener("load", function () {
+        let carousel2 = document.querySelector('.carousel2');
+        $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
+        $.ajax({
+            type: 'get',
+            url: "{{ route('site.slideshows.ajax.getData') }}",
+            success: function (response) {
+                carousel2.innerHTML = '';
+                response.forEach(function (item, index) {
+                    let slide = `
+        <div class="carousel__face"
+             style="background-image: url(${item.images.url})">
+            <div class="m-auto text-center text-light">
+                <h4>${item.title}</h4>
+                <p class="small">
+               ${item.description}
+                </p>
+            </div>
+        </div>`;
+                    carousel2.innerHTML += slide;
+                });
+            }
+        });
+    });
+
+</script>
+<script>
     function zoomIn(id) {
         id.style.scale = 1.1
     }
+
     function zoomOut(id) {
         id.style.scale = 1
     }

@@ -23,11 +23,11 @@ class HomeController extends Controller
         return view('site.index', compact('slideShows','projects'));
     }
 
-    public function aboutus()
-    {
-        $services = $this->HomeRepository->getServices();
-        $this->HomeRepository->getHomeSeoTools();
-        $getJsonLd = $this->HomeRepository->getAboutJsonLd();
-        return view('site.pages.about', compact('getJsonLd','services'));
-    }
+//    public function aboutus()
+//    {
+//        $services = $this->HomeRepository->getServices();
+//        $this->HomeRepository->getHomeSeoTools();
+//        $getJsonLd = $this->HomeRepository->getAboutJsonLd();
+//        return view('site.pages.about', compact('getJsonLd','services'));
+//    }
 }
