@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-8">
                 <div class="row my-2">
-                    <h1>چرا ارم صنعت موج گستر...؟</h1>
+                    <h1 class="text-primary-1">چرا ارم صنعت موج گستر...؟</h1>
                     <img style="border-radius: 30px" height="800px"
                          src="https://dl.musicalacademy.ir/musicalacademy/storage/photos/videocourses/guitarLesonMohammadAfshar.jpg"
                          onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)"

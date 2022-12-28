@@ -12,9 +12,7 @@
 
     @include('site.sections.experience')
 
-    @include('site.sections.slideshow')
-
-    @include('site.sections.laboratory')
+    @include('site.sections.projects')
 
     @include('site.sections.cooperation')
 

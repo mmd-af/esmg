@@ -1,111 +1,56 @@
-    <div class="container">
-        <div class="row">
-            <div class="text-center">
-                <h2 class="p-4">پروژه ها</h2>
-            </div>
-        </div>
-        <div class="row">
-            @foreach ($projects as $project)
-                <div class="card card-body bg-primary col-lg-2 col-sm-12 ml-2">
-                    <img class="card-img-top d-flex align-items-center" src="{{ asset('upload/projects/' . $project->primary_image) }}" alt="{{ $project->project_name }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $project->project_name }}</h5>
-                        <li class="list-group-item">نام کارفرما: {{$project->employer_name}}</li>
-                        <li class="list-group-item">محل اجرا: {{$project->project_location}}</li>
-                        <li class="list-group-item">سال اجرا: {{$project->year_enforce}}</li>
-                        <li class="list-group-item">
-                            <a href="#" data-toggle="modal" data-target="#productModal-{{$project->id}}">
-                                <span class="btn btn-success btn-sm">نمایش</span></a>
-                            </li>
-                        </div>
-                </div>
-                @endforeach
-                 <div class="d-flex justify-content-center mt-5">
-                    {{ $projects->render() }}
-                </div>
-        </div>
-    </div>
-    <!-- Modal -->
-    @foreach ($projects as $project)
-        <div class="modal fade" id="productModal-{{$project->id}}" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true"><i class="fa fa-window-close fa-xs" aria-hidden="true"></i></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+<div class="container my-3">
+    <h1 class="text-primary-1">پروژه های ما</h1>
+    <div class="bg-primary-1 overflow-hidden" style="border-radius: 30px">
+        <div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($projects as $project)
+                    <div class="carousel-item @if($loop->first) active @endif"
+                         data-bs-interval="{{$project->interval}}">
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-6" style="direction: rtl;">
-                                <div class="project-details-content quickview-content">
-                                    <h2 class="text-right mb-4">
-                                        <img class="card-img-small" src="{{ url('/upload/projects/' . $project->logo_image) }}" alt="" />
-                                        {{ $project->project_name }}</h2>
-                                        <p class="text-right">
-                                            {{ $project->description }}
-                                        </p>
-                                        <div class="pro-details-meta">
-                                            <span>نام کارفرما:</span>
-                                            <ul>
-                                                <li>{{ $project->employer_name }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="pro-details-meta">
-                                            <span>محل اجرا</span>
-                                            <ul>
-                                                <li>{{ $project->project_location }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="pro-details-meta">
-                                            <span>سال اجرا</span>
-                                            <ul>
-                                                <li>{{ $project->year_enforce }}</li>
-                                            </ul>
-                                        </div>
-                                        <div class="pro-details-meta">
-                                            <ul>
-                                                <span>رضایت مشتری</span>
-                                                <li>
-                                                    <a href="{{ url('/upload/projects/' . $project->customer_image) }}" data-lightbox="image-1"><img class="card-img-small" src="{{ url('/upload/projects/' . $project->customer_image) }}" alt="" /></a>
-                                                </li>
-                                            </ul>
+                            <div class="col-sm-12 col-md-6">
+                                <img src="{{ asset('upload/projects/' . $project->primary_image) }}"
+                                     class="img-fluid w-100 p-3"
+                                     style="border-radius: 30px"
+                                     alt="{{$project->project_name}}">
+                            </div>
+                            <div class="col-sm-12 col-md-6 bg-secondary-1">
+                                <div class="p-5">
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1">
+                                        <div class="d-flex justify-content-between">
+                                            <p><strong>نام کارفرما: </strong>{{$project->employer_name}}</p>
+                                            <img class="img-fluid rounded-circle w-25"
+                                                 src="{{ url('/upload/projects/' . $project->logo_image) }}"
+                                                 alt="{{$project->employer_name}}"/>
                                         </div>
                                     </div>
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1"><strong>محل
+                                            اجرا: </strong>{{$project->project_location}}</div>
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1"><strong>سال
+                                            اجرا: </strong>{{$project->year_enforce}}</div>
                                 </div>
-                                <div class="col-md-5 col-sm-12 col-xs-12">
-                                    <div class="tab-content quickview-big-img">
-                                        <div id="pro-primary-{{$project->id}}" class="tab-pane fade show active">
-                                            <img src="{{ url('/upload/projects/' . $project->primary_image) }}" width="300px" alt="" />
-                                        </div>
-                                        @foreach ($project->images as $image)
-                                            <div id="pro-{{$image->id}}" class="tab-pane fade">
-                                                <img width="300px" src="{{ url('/upload/projects/' . $image->image) }}" alt="" />
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <!-- Thumbnail Large Image End -->
-                                    <!-- Thumbnail Image End -->
-                                    <div class="quickview-wrap mt-15">
-                                        <div class="quickview-slide-active owl-carousel nav nav-style-2" role="tablist">
-                                            <a class="active" data-toggle="tab" href="#pro-primary-{{$project->id}}">
-                                                <img class="card-img-small" src="{{ url('/upload/projects/' . $project->primary_image) }}"  width="200px" alt="" />
-                                            </a>
-                                            @foreach ($project->images as $image)
-                                                <a data-toggle="tab" href="#pro-{{$image->id}}">
-                                                    <img class="card-img-small" src="{{ url('/upload/projects/' . $image->image) }}" alt="" />
-                                                </a>
-                                            @endforeach
-                                        </div>
-                                    </div>
-                                </div>
-
-
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="text-center text-light sm-small py-3" style="background-color: rgba(0,0,0,0.5)">
+                                <h1>{{$project->project_name}}</h1>
+                                <p class="px-5">{{Str::limit($project->description,450)}}</p>
+                                <a href="{{$project->link}}"
+                                   class="btn btn-outline-light btn-sm rounded-pill px-5 py-2">جزئیات بیشتر</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                @endforeach
             </div>
-        @endforeach
-        <!-- Modal end -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark1"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark1"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
