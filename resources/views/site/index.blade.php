@@ -1,5 +1,8 @@
 @extends('site.layouts.index')
 
+@section('style')
+
+@endsection
 
 @section('content')
 
@@ -11,10 +14,12 @@
 
     @include('site.sections.slideshow')
 
-    @include('site.sections.projects')
-
     @include('site.sections.laboratory')
 
     @include('site.sections.cooperation')
+
+@endsection
+
+@section('script')
 
 @endsection

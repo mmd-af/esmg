@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicons/favicon.ico')}}">
     <meta name="theme-color" content="#ccffff">
     <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
+    @yield('style')
 </head>
 <body>
 <main class="main" id="top">
