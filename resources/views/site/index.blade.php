@@ -6,15 +6,15 @@
 
 @section('content')
 
-    @include('site.sections.landing-slide')
+    @include('site.sections.01-landing-slide')
 
-    @include('site.sections.introducing-services')
+    @include('site.sections.02-introducing-services')
 
-    @include('site.sections.experience')
+    @include('site.sections.03-experience')
 
-    @include('site.sections.projects')
+    @include('site.sections.04-projects')
 
-    @include('site.sections.cooperation')
+    @include('site.sections.05-our-customers')
 
 @endsection
 

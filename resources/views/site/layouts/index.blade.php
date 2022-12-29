@@ -12,51 +12,39 @@
     <meta name="theme-color" content="#ccffff">
     <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
     @yield('style')
+
 </head>
 <body>
 <main class="main" id="top">
     @include('site.sections.navbar')
     @yield('content')
-    <section class="py-0 py-xxl-6" id="help">
-        <div class="bg-holder"
-             style="background-image:url(img/gallery/footer-bg.png);background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-            <div class="row min-vh-75 min-vh-xl-50 pt-10 text-white">
-                <div class="col-6 col-md-4 col-xl-4 mb-3">
-                    <div class="text-white p-4">
-                        <i class="fas fa-map-marker-alt fa-3x"></i>
-                    </div>
-
-                    <ul class="list-unstyled mb-md-4 mb-lg-0">
-                        <li class="lh-lg"><p>شیراز - شهرک آرین - خ فناوری - پارک علم و فناوری فارس - ساختمان تخت جمشید -
-                                واحد 3010</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-4 col-xl-4 mb-3">
-                    <div class="text-white p-4">
-                        <i class="fas fa-address-book fa-3x"></i>
-                    </div>
-
-                    <ul class="list-unstyled mb-md-4 mb-lg-0">
-                        <li class="lh-lg"><i class="fas fa-envelope"></i> info@esmg.co.ir</li>
-                        <li class="lh-lg"><i class="fas fa-phone-square"></i> 09376925054</li>
-                        <li class="lh-lg"><i class="fas fa-phone-square"></i> 071-36240650</li>
-                    </ul>
-                </div>
-            </div>
-            <hr/>
-            <div class="row flex-center pb-3">
-                <div class="col-md-6 order-0">
-                    <p class="text-200 text-center text-md-start">Copyright &copy; esmg.co.ir 2022 </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('site.sections.footer')
 </main>
+<div class="floating-chat">
+    <i class="fa fa-comments" aria-hidden="true"></i>
+    <div class="chat">
+        <div class="header">
+            <span class="title">
+                از ما بپرسید؟
+            </span>
+            <button>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="footer">
+            <form action="" method="post">
+                @csrf
+                <input type="text" name="contact" class="form-control">
+                <textarea name="message" class="form-control mt-3"></textarea>
+                <button id="sendMessage mt-3">ارسال</button>
+            </form>
+{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+
+        </div>
+    </div>
+</div>
 <script src="{{asset('js/site.js')}}"></script>
 <script>
     window.addEventListener("load", function () {
@@ -86,6 +74,90 @@
 
 </script>
 <script>
+    var element = $('.floating-chat');
+    var myStorage = localStorage;
+
+    if (!myStorage.getItem('chatID')) {
+        myStorage.setItem('chatID', createUUID());
+    }
+
+    setTimeout(function() {
+        element.addClass('enter');
+    }, 1000);
+
+    element.click(openElement);
+
+    function openElement() {
+        var messages = element.find('.messages');
+        var textInput = element.find('.text-box');
+        element.find('>i').hide();
+        element.addClass('expand');
+        element.find('.chat').addClass('enter');
+        var strLength = textInput.val().length * 2;
+        textInput.keydown(onMetaAndEnter).prop("disabled", false).focus();
+        element.off('click', openElement);
+        element.find('.header button').click(closeElement);
+        element.find('#sendMessage').click(sendNewMessage);
+        messages.scrollTop(messages.prop("scrollHeight"));
+    }
+
+    function closeElement() {
+        element.find('.chat').removeClass('enter').hide();
+        element.find('>i').show();
+        element.removeClass('expand');
+        element.find('.header button').off('click', closeElement);
+        element.find('#sendMessage').off('click', sendNewMessage);
+        element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
+        setTimeout(function() {
+            element.find('.chat').removeClass('enter').show()
+            element.click(openElement);
+        }, 500);
+    }
+
+    function createUUID() {
+        // http://www.ietf.org/rfc/rfc4122.txt
+        var s = [];
+        var hexDigits = "0123456789abcdef";
+        for (var i = 0; i < 36; i++) {
+            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+        }
+        s[14] = "4"; // bits 12-15 of the time_hi_and_version field to 0010
+        s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1); // bits 6-7 of the clock_seq_hi_and_reserved to 01
+        s[8] = s[13] = s[18] = s[23] = "-";
+
+        var uuid = s.join("");
+        return uuid;
+    }
+
+    function sendNewMessage() {
+        var userInput = $('.text-box');
+        var newMessage = userInput.html().replace(/\<div\>|\<br.*?\>/ig, '\n').replace(/\<\/div\>/g, '').trim().replace(/\n/g, '<br>');
+
+        if (!newMessage) return;
+
+        var messagesContainer = $('.messages');
+
+        messagesContainer.append([
+            '<li class="self">',
+            newMessage,
+            '</li>'
+        ].join(''));
+
+        // clean out old message
+        userInput.html('');
+        // focus on input
+        userInput.focus();
+
+        messagesContainer.finish().animate({
+            scrollTop: messagesContainer.prop("scrollHeight")
+        }, 250);
+    }
+
+    function onMetaAndEnter(event) {
+        if ((event.metaKey || event.ctrlKey) && event.keyCode == 13) {
+            sendNewMessage();
+        }
+    }
     function zoomIn(id) {
         id.style.scale = 1.1
     }
