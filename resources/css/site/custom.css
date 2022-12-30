@@ -374,3 +374,11 @@ body, h1, h2, h3, h4, h5, h6, a {
         margin-right: 0;
     }
 }
+
+.content-zoom {
+    transition: .5s;
+}
+
+.content-zoom:hover {
+    transform: scale(1.1);
+}

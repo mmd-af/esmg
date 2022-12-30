@@ -158,13 +158,6 @@
             sendNewMessage();
         }
     }
-    function zoomIn(id) {
-        id.style.scale = 1.1
-    }
-
-    function zoomOut(id) {
-        id.style.scale = 1
-    }
 </script>
 @yield('script')
 </body>

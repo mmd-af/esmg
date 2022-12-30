@@ -7,7 +7,7 @@
                     <div class="carousel-item @if($loop->first) active @endif"
                          data-bs-interval="{{$project->interval}}">
                         <div class="row">
-                            <div class="col-sm-12 col-md-6">
+                            <div class="col-sm-12 col-md-6 content-zoom">
                                 <img src="{{ asset('upload/projects/' . $project->primary_image) }}"
                                      class="img-fluid w-100 p-3"
                                      style="border-radius: 30px"
@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-sm-12 col-md-6 bg-secondary-1">
                                 <div class="p-5">
-                                    <div class="border border-1 rounded-3 p-5 border-primary-1">
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1 content-zoom">
                                         <div class="d-flex justify-content-between">
                                             <p><strong>نام کارفرما: </strong>{{$project->employer_name}}</p>
                                             <img class="img-fluid rounded-circle w-25"
@@ -23,15 +23,15 @@
                                                  alt="{{$project->employer_name}}"/>
                                         </div>
                                     </div>
-                                    <div class="border border-1 rounded-3 p-5 border-primary-1"><strong>محل
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1 content-zoom"><strong>محل
                                             اجرا: </strong>{{$project->project_location}}</div>
-                                    <div class="border border-1 rounded-3 p-5 border-primary-1"><strong>سال
+                                    <div class="border border-1 rounded-3 p-5 border-primary-1 content-zoom"><strong>سال
                                             اجرا: </strong>{{$project->year_enforce}}</div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="text-center text-light sm-small py-3" style="background-color: rgba(0,0,0,0.5)">
+                            <div class="text-center text-light sm-small py-3 content-zoom" style="background-color: rgba(0,0,0,0.5)">
                                 <h1>{{$project->project_name}}</h1>
                                 <p class="px-5">{{Str::limit($project->description,450)}}</p>
                                 <a href="{{$project->link}}"

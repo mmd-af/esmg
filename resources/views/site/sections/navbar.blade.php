@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light sticky-top bg-secondary-1" id="neubar">
     <div class="container">
-        <a class="navbar-brand" href="{{route('home.index')}}"><img onmouseover="zoomIn(this)" onmouseleave="zoomOut(this)" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
+        <a class="navbar-brand" href="{{route('home.index')}}"><img class="content-zoom" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
