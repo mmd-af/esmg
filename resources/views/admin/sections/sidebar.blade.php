@@ -23,6 +23,12 @@
             مدیریت:
         </div>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.categories.index')}}">
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                <span>دسته بندی ها</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsetests"
                aria-expanded="true"
                aria-controls="collapsePages">
