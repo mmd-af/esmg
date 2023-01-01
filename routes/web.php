@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 require __DIR__ . '/auth.php';
-require __DIR__ . '/projects.php';
-
 
 Route::get('/contactus', function () {
     return view('site.sheets.contactus');
@@ -39,3 +38,16 @@ Route::get('/taghsim', function () {
 Route::get('/ayarsanj', function () {
     return view('site.sheets.ayarsanj');
 })->name('sheets.ayarsanj');
+
+
+Route::get('/query', function () {
+    $models = \App\Models\Project::all();
+    foreach ($models as $model) {
+        $model->slug = Str::slug($model->project_name);
+        $model->selected = 1;
+        $model->save();
+    }
+    echo "query is finished";
+});
+
+

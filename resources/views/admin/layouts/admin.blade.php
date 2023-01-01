@@ -2,67 +2,67 @@
 <html lang="fa" dir="rtl">
 
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <title>esmg.co.ir - @yield('title') </title>
 
-  <title>esmg.co.ir - @yield('title') </title>
-
-  <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
 
 </head>
 
 <body id="page-top">
 
-  <!-- Page Wrapper -->
-  <div id="wrapper">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
     <!-- Sidebar -->
 @include('admin.sections.sidebar')
-    <!-- End of Sidebar -->
+<!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
-      <!-- Main Content -->
-      <div id="content">
+        <!-- Main Content -->
+        <div id="content">
 
-        <!-- Topbar -->
-@include('admin.sections.topbar')
+            <!-- Topbar -->
+        @include('admin.sections.topbar')
         <!-- End of Topbar -->
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
 
-@yield('content')
+                @yield('content')
+
+            </div>
+            <!-- /.container-fluid -->
 
         </div>
-        <!-- /.container-fluid -->
+        <!-- End of Main Content -->
 
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-@include('admin.sections.footer')
-      <!-- End of Footer -->
+        <!-- Footer -->
+    @include('admin.sections.footer')
+    <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
+</div>
+<!-- End of Page Wrapper -->
 
-  <!-- Scroll to Top Button-->
+<!-- Scroll to Top Button-->
 @include('admin.sections.scroll_top')
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="{{ asset('/js/admin.js') }}"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="{{ asset('/js/admin.js') }}"></script>
 
-  @include('sweet::alert')
-  @yield('script')
+@include('sweet::alert')
+@yield('script')
 </body>
 
 </html>

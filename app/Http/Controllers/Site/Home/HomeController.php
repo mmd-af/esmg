@@ -19,8 +19,11 @@ class HomeController extends Controller
     public function homeIndex()
     {
         $slideShows = $this->HomeRepository->getSlideShow();
-        $projects= Project::latest()->paginate(4);
-        return view('site.index', compact('slideShows','projects'));
+        $projects = Project::query()
+            ->where('is_active', '1')
+            ->where('selected', 1)
+            ->get();
+        return view('site.index', compact('slideShows', 'projects'));
     }
 
 //    public function aboutus()
