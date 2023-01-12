@@ -4,5 +4,6 @@
     "/css/site.css": "/css/site.css",
     "/css/admin.css": "/css/admin.css",
     "/js/admin.js.LICENSE.txt": "/js/admin.js.LICENSE.txt",
-    "/js/site.js.LICENSE.txt": "/js/site.js.LICENSE.txt"
+    "/js/site.js.LICENSE.txt": "/js/site.js.LICENSE.txt",
+    "/chart.js/chart.js": "/chart.js/chart.js"
 }

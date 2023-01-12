@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<main class="main" id="top">
+<main class="" id="top">
     @include('site.sections.navbar')
     @yield('content')
     @include('site.sections.footer')
@@ -38,14 +38,15 @@
                 <textarea name="message" class="form-control mt-3"></textarea>
                 <button id="sendMessage mt-3">ارسال</button>
             </form>
-{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
-{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
-{{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+            {{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+            {{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
+            {{--            <div class="text-box" contenteditable="true" disabled="true"></div>--}}
 
         </div>
     </div>
 </div>
 <script src="{{asset('js/site.js')}}"></script>
+<script src="{{ asset('chart.js/chart.js') }}"></script>
 <script>
     window.addEventListener("load", function () {
         let carousel2 = document.querySelector('.carousel2');
@@ -81,7 +82,7 @@
         myStorage.setItem('chatID', createUUID());
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
         element.addClass('enter');
     }, 1000);
 
@@ -108,7 +109,7 @@
         element.find('.header button').off('click', closeElement);
         element.find('#sendMessage').off('click', sendNewMessage);
         element.find('.text-box').off('keydown', onMetaAndEnter).prop("disabled", true).blur();
-        setTimeout(function() {
+        setTimeout(function () {
             element.find('.chat').removeClass('enter').show()
             element.click(openElement);
         }, 500);

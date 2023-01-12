@@ -7,9 +7,12 @@
 
 }
 
-body, h1, h2, h3, h4, h5, h6, a {
+body {
     font-family: 'IRANSansWeb', system-ui;
     direction: rtl;
+    background-image: url("../../img/site/esmg-bg.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /*#neubar {*/
@@ -104,6 +107,19 @@ body, h1, h2, h3, h4, h5, h6, a {
 
 .border-secondary-1 {
     border-color: #cfffff !important
+}
+
+.bg-gradiant {
+    background-image: linear-gradient(#022b19, #063660);
+    /*background-image: linear-gradient(180deg, rgba(2, 43, 24, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);*/
+}
+
+.bg-gradiant-2 {
+    background-image: linear-gradient(180deg, rgba(6, 54, 96, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);
+}
+
+.bg-gradiant-3 {
+    background-image: linear-gradient(0, rgba(6, 54, 96, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);
 }
 
 .carousel-control-next-icon,

@@ -14,6 +14,8 @@
 
     @include('site.sections.04-projects')
 
+    @include('site.sections.chart')
+
     @include('site.sections.05-our-customers')
 
 @endsection

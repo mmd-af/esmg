@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-secondary-1" id="neubar">
+<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-gradiant border border-white" id="neubar">
     <div class="container">
-        <a class="navbar-brand" href="{{route('home.index')}}"><img class="content-zoom" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
+        <a class="navbar-brand bg-white" style="border-radius: 25px" href="{{route('home.index')}}"><img class="content-zoom" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,19 +11,19 @@
                     <a class="nav-link mx-2 active" aria-current="page" href="{{route('home.index')}}">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Products</a>
+                    <a class="text-light nav-link mx-2" href="#">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-2" href="#">Pricing</a>
+                    <a class="text-light nav-link mx-2" href="#">Pricing</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="text-light nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Company
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
-                        <li><a class="dropdown-item" href="#">About Us</a></li>
-                        <li><a class="dropdown-item" href="#">Contact us</a></li>
+                        <li><a class="text-light dropdown-item" href="#">Blog</a></li>
+                        <li><a class="text-light dropdown-item" href="#">About Us</a></li>
+                        <li><a class="text-light dropdown-item" href="#">Contact us</a></li>
                     </ul>
                 </li>
             </ul>
