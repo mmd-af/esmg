@@ -12,11 +12,29 @@
     <meta name="theme-color" content="#ccffff">
     <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
     @yield('style')
-
+    <style>
+        .letter {
+            display: inline-block;
+            opacity: 0;
+        }
+    </style>
 </head>
 <body>
 <main class="" id="top">
     @include('site.sections.navbar')
+    <div class="container py-5 text-white text-center">
+        <p>
+            <span class="letter">ارم</span>
+            <span class="letter">صنعت</span>
+            <span class="letter">موج</span>
+            <span class="letter">گستر</span>
+            <div></div>
+            <span class="letter display-1">ESMG</span>
+            <div></div>
+            <span class="letter small">دانش</span>
+            <span class="letter small">بنیان</span>
+        </p>
+    </div>
     @yield('content')
     @include('site.sections.footer')
 </main>
@@ -47,7 +65,6 @@
 </div>
 <script src="{{asset('js/site.js')}}"></script>
 <script src="{{asset('js/scrollreveal.js')}}"></script>
-{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>--}}
 <script>
     window.addEventListener("load", function () {
         let carousel2 = document.querySelector('.carousel2');
@@ -186,6 +203,42 @@
         }, 75);
 
     })();
+</script>
+<script>
+    let testAnim = document.getElementById('testAnim');
+    let animation = anime({
+        targets: '.letter',
+        opacity: 1,
+        translateY: 50,
+        rotate: {
+            value: 360,
+            duration: 2000,
+            easing: 'easeInExpo'
+        },
+        scale: anime.stagger([0.7, 1], {from: 'center'}),
+        delay: anime.stagger(100, {start: 1000}),
+        translateX: [-10, 30]
+    });
+
+
+    var h1El = document.querySelectorAll('.animEffect');
+
+    let animateBlocks = () => {
+        anime({
+            targets: h1El,
+            translateX: () => {
+                return anime.random(-10, 10);
+            },
+            translateY: () => {
+                return anime.random(-10, 10);
+            },
+            easing: "linear",
+            duration: 3000,
+            delay: anime.stagger(1),
+            complete: animateBlocks,
+        });
+    };
+    animateBlocks();
 </script>
 @yield('script')
 </body>

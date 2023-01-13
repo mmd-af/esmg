@@ -1,6 +1,6 @@
 <div class="container-fluid bg-gradiant-3 py-5 reveal-content">
-    <div class="container">
-        <h1 class="text-white">پروژه های ما</h1>
+    <div class="container overflow-hidden">
+        <h1 class="text-white animEffect">پروژه های ما</h1>
         <div class="overflow-hidden" style="border-radius: 30px">
             <div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">

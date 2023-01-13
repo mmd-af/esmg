@@ -1,6 +1,6 @@
 <div class="container-fluid py-3 bg-white reveal-content">
-    <div class="container">
-        <h1 class="text-primary-1">مشتریان ما:</h1>
+    <div class="container overflow-hidden">
+        <h1 class="text-primary-1 animEffect">مشتریان ما:</h1>
         <div class="row">
             @foreach ($projects as $project)
                 <div class="col-xs-6 col-md-4 col-lg-3 text-center p-5 content-zoom">
