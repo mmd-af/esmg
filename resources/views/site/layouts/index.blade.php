@@ -165,8 +165,8 @@
     (function scrollReveal() {
         window.sr = ScrollReveal();
         sr.reveal('.reveal-content', {
-            duration: 800,
-            distance: '100px',
+            duration: 1000,
+            distance: '70px',
             easing: 'ease-out',
             origin: 'bottom',
             reset: true,
@@ -176,9 +176,9 @@
         }, 150);
 
         var revealChildren = sr.reveal('.card-title, .card-text', {
-            duration: 500,
+            duration: 1000,
             scale: 1,
-            distance: '20px',
+            distance: '70px',
             origin: 'bottom',
             reset: true,
             easing: 'ease-out',

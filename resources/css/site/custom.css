@@ -92,6 +92,11 @@ body {
     /*background-image: linear-gradient(180deg, rgba(2, 43, 24, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);*/
 }
 
+.bg-gradiant-1 {
+    background-image: linear-gradient(#063660, #022b19);
+    /*background-image: linear-gradient(180deg, rgba(2, 43, 24, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);*/
+}
+
 .bg-gradiant-2 {
     background-image: linear-gradient(180deg, rgba(6, 54, 96, 1) 0%, rgba(6, 54, 96, 1) 64%, rgba(6, 54, 96, 0.34) 100%);
 }

@@ -1,4 +1,4 @@
-<div class="container-fluid bg-gradiant-3 reveal-content">
+<div class="container-fluid bg-gradiant-1 reveal-content">
     <div class="row">
         <div class="col-6 col-md-4 col-xl-4 mb-3">
             <div class="text-white p-4">
