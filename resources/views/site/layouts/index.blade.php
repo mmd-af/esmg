@@ -20,24 +20,22 @@
     </style>
 </head>
 <body>
-<main class="" id="top">
-    @include('site.sections.navbar')
-    <div class="container py-5 text-white text-center">
-        <p>
-            <span class="letter">ارم</span>
-            <span class="letter">صنعت</span>
-            <span class="letter">موج</span>
-            <span class="letter">گستر</span>
-            <div></div>
-            <span class="letter display-1">ESMG</span>
-            <div></div>
-            <span class="letter small">دانش</span>
-            <span class="letter small">بنیان</span>
-        </p>
+@include('site.sections.navbar')
+<div class="container pb-5 mb-5 text-white text-center">
+    <div class="titleEffect">
+        <span class="letter">ارم</span>
+        <span class="letter">صنعت</span>
+        <span class="letter">موج</span>
+        <span class="letter">گستر</span>
+        <div></div>
+        <span class="letter display-1">ESMG</span>
+        <div></div>
+        <span class="letter small">دانش</span>
+        <span class="letter small">بنیان</span>
     </div>
-    @yield('content')
-    @include('site.sections.footer')
-</main>
+</div>
+@yield('content')
+@include('site.sections.footer')
 <div class="floating-chat">
     <i class="fa fa-comments" aria-hidden="true"></i>
     <div class="chat">
@@ -221,8 +219,25 @@
     });
 
 
-    var h1El = document.querySelectorAll('.animEffect');
+    let animateTitleBlocks = () => {
+        anime({
+            targets: '.titleEffect',
+            translateX: () => {
+                return anime.random(-20, 20);
+            },
+            translateY: () => {
+                return anime.random(-10, 10);
+            },
+            easing: "linear",
+            duration: 5000,
+            delay: anime.stagger(1),
+            complete: animateTitleBlocks,
+        });
+    };
+    animateTitleBlocks();
 
+
+    var h1El = document.querySelectorAll('.animEffect');
     let animateBlocks = () => {
         anime({
             targets: h1El,

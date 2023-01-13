@@ -10,7 +10,8 @@
 body {
     font-family: 'IRANSansWeb', system-ui;
     direction: rtl;
-    background-image: url("../../img/site/esmg-bg.webp");
+    background-image: url("../../img/site/esmg-bg.jpg");
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
