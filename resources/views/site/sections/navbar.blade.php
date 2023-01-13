@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-gradiant border border-white" id="neubar">
+<nav class="navbar navbar-expand-sm navbar-light sticky-top bg-gradiant border border-white reveal-content" id="neubar">
     <div class="container">
         <a class="navbar-brand bg-white" style="border-radius: 25px" href="{{route('home.index')}}"><img class="content-zoom" src="{{asset('img/gallery/logo2.png')}}" height="60" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

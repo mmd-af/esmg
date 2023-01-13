@@ -17,4 +17,5 @@ mix.js('resources/js/site/site.js', 'public/js')
     .sass('resources/scss/admin/admin.scss', 'public/css')
 
     .copy('resources/css/general-css/', 'public/css/')
-    .copy('resources/js/general-js/', 'public/js/');
+    .copy('resources/js/general-js/', 'public/js/')
+    .copy('node_modules/scrollreveal/dist/scrollreveal.js', 'public/js');

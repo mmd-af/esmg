@@ -1,4 +1,4 @@
-<section class="my-5" id="pricingTable">
+<section class="my-5 reveal-content" id="pricingTable">
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-lg-8">

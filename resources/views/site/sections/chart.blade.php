@@ -1,14 +1,13 @@
-<div class="container-fluid">
+<div class="container reveal-content" style="background-color: rgba(255,255,255,0.5);">
     <div class="row">
         <div class="col-md-6">
             اینجا چی بنویسیم؟
         </div>
-        <div class="col-md-6 bg-secondary">
+        <div class="col-md-6">
             <canvas id="radarChart"></canvas>
         </div>
     </div>
 </div>
-
 
 @section('script')
     <script>
@@ -30,7 +29,7 @@
                 },
                     {
                         label: "ESMG Product",
-                        data: [28, 48, 40, 19, 96, 27, 100],
+                        data: [28, 48, 40, 19, 96, 27, 80],
                         backgroundColor: [
                             'rgba(0, 250, 220, .2)',
                         ],

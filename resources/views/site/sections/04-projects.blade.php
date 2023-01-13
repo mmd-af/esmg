@@ -1,4 +1,4 @@
-<div class="container-fluid bg-gradiant-3 py-5">
+<div class="container-fluid bg-gradiant-3 py-5 reveal-content">
     <div class="container">
         <h1 class="text-white">پروژه های ما</h1>
         <div class="overflow-hidden" style="border-radius: 30px">
@@ -8,12 +8,14 @@
                         <div class="carousel-item @if($loop->first) active @endif"
                              data-bs-interval="{{$project->interval}}">
                             <div class="row">
-                                <div class="col-sm-12 col-md-8" style="background-color: rgba(255,255,255,0.5)">
+                                <div class="col-sm-12 col-md-8 overflow-hidden"
+                                     style="background-color: rgba(255,255,255,0.5);height: 500px;">
                                     <img src="{{ asset('upload/projects/' . $project->primary_image) }}"
                                          class="img-fluid w-100 content-zoom"
                                          alt="{{$project->project_name}}">
                                 </div>
-                                <div class="col-sm-12 col-md-4" style="background-color: rgba(255,255,255,0.5)">
+                                <div class="col-sm-12 col-md-4"
+                                     style="background-color: rgba(255,255,255,0.5);height: 500px;">
                                     <div class="p-5">
                                         <div class="border border-1 rounded-3 p-5 border-primary-1 content-zoom">
                                             <div class="d-flex justify-content-between">

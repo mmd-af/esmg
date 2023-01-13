@@ -3,7 +3,5 @@
     "/js/admin.js": "/js/admin.js",
     "/css/site.css": "/css/site.css",
     "/css/admin.css": "/css/admin.css",
-    "/js/admin.js.LICENSE.txt": "/js/admin.js.LICENSE.txt",
-    "/js/site.js.LICENSE.txt": "/js/site.js.LICENSE.txt",
-    "/chart.js/chart.js": "/chart.js/chart.js"
+    "/js/scrollreveal.js": "/js/scrollreveal.js"
 }

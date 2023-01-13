@@ -46,7 +46,8 @@
     </div>
 </div>
 <script src="{{asset('js/site.js')}}"></script>
-<script src="{{ asset('chart.js/chart.js') }}"></script>
+<script src="{{asset('js/scrollreveal.js')}}"></script>
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>--}}
 <script>
     window.addEventListener("load", function () {
         let carousel2 = document.querySelector('.carousel2');
@@ -159,6 +160,32 @@
             sendNewMessage();
         }
     }
+</script>
+<script>
+    (function scrollReveal() {
+        window.sr = ScrollReveal();
+        sr.reveal('.reveal-content', {
+            duration: 800,
+            distance: '100px',
+            easing: 'ease-out',
+            origin: 'bottom',
+            reset: true,
+            scale: 1,
+            viewFactor: 0,
+            afterReveal: revealChildren,
+        }, 150);
+
+        var revealChildren = sr.reveal('.card-title, .card-text', {
+            duration: 500,
+            scale: 1,
+            distance: '20px',
+            origin: 'bottom',
+            reset: true,
+            easing: 'ease-out',
+            viewFactor: 1,
+        }, 75);
+
+    })();
 </script>
 @yield('script')
 </body>

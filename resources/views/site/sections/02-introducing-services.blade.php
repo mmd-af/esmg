@@ -1,4 +1,4 @@
-<div class="container-fluid py-5 bg-gradiant-2">
+<div class="container-fluid py-5 bg-gradiant-2 reveal-content">
     <div class="container">
         <div class="row">
             <h1 class="text-white">معرفی خدمات</h1>
