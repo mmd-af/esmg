@@ -21,7 +21,7 @@
 </head>
 <body>
 @include('site.sections.navbar')
-<div class="container pb-5 mb-5 text-white text-center">
+<div class="container pb-5 my-5 text-white text-center content-zoom">
     <div class="titleEffect">
         <span class="letter">ارم</span>
         <span class="letter">صنعت</span>
@@ -204,37 +204,44 @@
 </script>
 <script>
     let testAnim = document.getElementById('testAnim');
-    let animation = anime({
-        targets: '.letter',
-        opacity: 1,
-        translateY: 50,
-        rotate: {
-            value: 360,
-            duration: 2000,
-            easing: 'easeInExpo'
-        },
-        scale: anime.stagger([0.7, 1], {from: 'center'}),
-        delay: anime.stagger(100, {start: 1000}),
-        translateX: [-10, 30]
-    });
-
-
-    let animateTitleBlocks = () => {
+    let animation = () => {
         anime({
-            targets: '.titleEffect',
+            targets: '.letter',
+            opacity: 1,
+            rotate: {
+                value: 360,
+                duration: 2000,
+                easing: 'easeInExpo'
+            },
+            scale: anime.stagger([0.7, 1], {from: 'center'}),
+            delay: anime.stagger(100, {start: 1000}),
             translateX: () => {
                 return anime.random(-20, 20);
             },
             translateY: () => {
                 return anime.random(-10, 10);
             },
-            easing: "linear",
-            duration: 5000,
-            delay: anime.stagger(1),
-            complete: animateTitleBlocks,
+            complete: animation,
         });
     };
-    animateTitleBlocks();
+    animation();
+
+    // let animateTitleBlocks = () => {
+    //     anime({
+    //         targets: '.titleEffect',
+    //         translateX: () => {
+    //             return anime.random(-20, 20);
+    //         },
+    //         translateY: () => {
+    //             return anime.random(-10, 10);
+    //         },
+    //         easing: "linear",
+    //         duration: 5000,
+    //         delay: anime.stagger(1),
+    //         complete: animateTitleBlocks,
+    //     });
+    // };
+    // animateTitleBlocks();
 
 
     var h1El = document.querySelectorAll('.animEffect');
