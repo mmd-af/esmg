@@ -1,10 +1,12 @@
-<div class="container reveal-content" style="background-color: rgba(255,255,255,0.5);">
-    <div class="row">
-        <div class="col-md-6">
-            اینجا چی بنویسیم؟
-        </div>
-        <div class="col-md-6">
-            <canvas id="radarChart"></canvas>
+<div class="container-fluid bg-primary-2 reveal-content pb-5">
+    <div class="container">
+        <div class="row bg-white p-5" style="border-radius: 30px">
+            <div class="col-sm-12 col-md-6">
+                اینجا چی بنویسیم؟
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <canvas id="radarChart"></canvas>
+            </div>
         </div>
     </div>
 </div>
