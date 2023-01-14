@@ -12,16 +12,10 @@
     <meta name="theme-color" content="#ccffff">
     <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
     @yield('style')
-    <style>
-        .letter {
-            display: inline-block;
-            opacity: 0;
-        }
-    </style>
 </head>
 <body>
 @include('site.sections.navbar')
-<div class="container pb-5 my-5 text-white text-center content-zoom">
+<div class="container pb-3 my-3 text-white text-center content-zoom">
     <div class="titleEffect">
         <span class="letter">ارم</span>
         <span class="letter">صنعت</span>
@@ -63,33 +57,33 @@
 </div>
 <script src="{{asset('js/site.js')}}"></script>
 <script src="{{asset('js/scrollreveal.js')}}"></script>
-<script>
-    window.addEventListener("load", function () {
-        let carousel2 = document.querySelector('.carousel2');
-        $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});
-        $.ajax({
-            type: 'get',
-            url: "{{ route('site.slideshows.ajax.getData') }}",
-            success: function (response) {
-                carousel2.innerHTML = '';
-                response.forEach(function (item, index) {
-                    let slide = `
-        <div class="carousel__face"
-             style="background-image: url(${item.images.url})">
-            <div class="m-auto text-center text-light">
-                <h4>${item.title}</h4>
-                <p class="small">
-               ${item.description}
-                </p>
-            </div>
-        </div>`;
-                    carousel2.innerHTML += slide;
-                });
-            }
-        });
-    });
+{{--<script>--}}
+{{--    window.addEventListener("load", function () {--}}
+{{--        let carousel2 = document.querySelector('.carousel2');--}}
+{{--        $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});--}}
+{{--        $.ajax({--}}
+{{--            type: 'get',--}}
+{{--            url: "{{ route('site.slideshows.ajax.getData') }}",--}}
+{{--            success: function (response) {--}}
+{{--                carousel2.innerHTML = '';--}}
+{{--                response.forEach(function (item, index) {--}}
+{{--                    let slide = `--}}
+{{--        <div class="carousel__face"--}}
+{{--             style="background-image: url(${item.images.url})">--}}
+{{--            <div class="m-auto text-center text-light">--}}
+{{--                <h4>${item.title}</h4>--}}
+{{--                <p class="small">--}}
+{{--               ${item.description}--}}
+{{--                </p>--}}
+{{--            </div>--}}
+{{--        </div>`;--}}
+{{--                    carousel2.innerHTML += slide;--}}
+{{--                });--}}
+{{--            }--}}
+{{--        });--}}
+{{--    });--}}
 
-</script>
+{{--</script>--}}
 <script>
     var element = $('.floating-chat');
     var myStorage = localStorage;
@@ -225,6 +219,39 @@
         });
     };
     animation();
+
+    let titleSlideShowAnime = () => {
+        anime({
+            targets: '.titleAnime',
+            translateX: 100,
+            direction: 'alternate',
+            loop: true,
+            easing: 'spring(5, 30, 7, 3)'
+        })
+    }
+    titleSlideShowAnime();
+
+    let DescriptSlideShowAnime = () => {
+        anime({
+            targets: '.descriptAnime',
+            translateX: 80,
+            direction: 'alternate',
+            loop: true,
+            easing: 'spring(6, 15, 4, 4)'
+        })
+    }
+    DescriptSlideShowAnime();
+
+    let BtnSlideShowAnime = () => {
+        anime({
+            targets: '.btnAnime',
+            translateX: 200,
+            direction: 'alternate',
+            loop: true,
+            easing: 'spring(25, 10, 10, 0)'
+        })
+    }
+    BtnSlideShowAnime();
 
     // let animateTitleBlocks = () => {
     //     anime({

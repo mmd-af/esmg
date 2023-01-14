@@ -382,3 +382,11 @@ body {
 .content-zoom:hover {
     transform: scale(1.1);
 }
+
+.letter {
+    display: inline-block;
+}
+
+.carousel-caption {
+    padding-bottom: 10rem;
+}

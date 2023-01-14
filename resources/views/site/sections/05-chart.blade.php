@@ -4,7 +4,7 @@
             <div class="col-sm-12 col-md-6">
                 اینجا چی بنویسیم؟
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 content-zoom">
                 <canvas id="radarChart"></canvas>
             </div>
         </div>
