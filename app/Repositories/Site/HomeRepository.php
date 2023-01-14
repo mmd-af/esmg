@@ -2,6 +2,7 @@
 
 namespace App\Repositories\Site;
 
+use App\Models\Project;
 use App\Models\SlideShow\SlideShow;
 
 class HomeRepository extends BaseRepository
@@ -17,8 +18,17 @@ class HomeRepository extends BaseRepository
                 'link_text',
                 'link'
             ])
+            ->where('is_active', 1)
             ->orderBy('order')
             ->with('images')
+            ->get();
+    }
+
+    public function getProjects()
+    {
+        return Project::query()
+            ->where('is_active', '1')
+            ->where('selected', 1)
             ->get();
     }
 
