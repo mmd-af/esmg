@@ -4,9 +4,13 @@
             <div class="col-sm-12 col-lg-8">
                 <div class="row my-2 overflow-hidden">
                     <h1 class="text-white animEffect">چرا ارم صنعت موج گستر...؟</h1>
-                    <img class="content-zoom mt-3" style="border-radius: 30px" height="550px"
-                         src="https://dl.musicalacademy.ir/musicalacademy/storage/photos/videocourses/guitarLesonMohammadAfshar.jpg"
-                         alt="">
+                    <div id="20637400745" class="mt-5">
+                        <script type="text/JavaScript"
+                                src="https://www.aparat.com/embed/UYCgR?data[rnddiv]=20637400745&data[responsive]=yes"></script>
+                    </div>
+{{--                    <img class="content-zoom mt-3" style="border-radius: 30px" height="550px"--}}
+{{--                         src="https://dl.musicalacademy.ir/musicalacademy/storage/photos/videocourses/guitarLesonMohammadAfshar.jpg"--}}
+{{--                         alt="">--}}
                 </div>
             </div>
             <div class="col-sm-12 col-lg-4">
