@@ -5,6 +5,10 @@ use Illuminate\Support\Str;
 
 require __DIR__ . '/auth.php';
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::get('/contactus', function () {
     return view('site.sheets.contactus');
 })->name('sheets.contactus');

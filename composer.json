@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.5",
         "myclabs/php-enum": "^1.8",
         "spatie/laravel-sluggable": "^3.4",
+        "unisharp/laravel-filemanager": "^2.5",
         "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {

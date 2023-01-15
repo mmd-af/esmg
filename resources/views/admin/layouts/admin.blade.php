@@ -57,7 +57,6 @@
 
 <!-- Scroll to Top Button-->
 @include('admin.sections.scroll_top')
-
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('/js/admin.js') }}"></script>
 <script src="{{asset('/js/ckeditor5/build/ckeditor.js')}}"></script>
@@ -91,6 +90,14 @@
             console.error(error);
         }
     }
+    var options = {
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+    };
+    $(editor).ckeditor(options);
+
 
 </script>
 @include('sweet::alert')
