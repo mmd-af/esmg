@@ -1,4 +1,4 @@
-<div id="landingSlideShowCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="landingSlideShowCaptions" class="carousel slide reveal-content" data-bs-ride="carousel">
     <div id="landingSlideShowDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             @foreach($slideShows as $slideShow)

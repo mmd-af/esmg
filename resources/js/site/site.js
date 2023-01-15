@@ -1,8 +1,10 @@
 window.$ = window.jQuery = require("jquery");
 require("./bootstrap");
 require('./bootstrap.bundle.min');
-// import anime from 'animejs/lib/anime.min';
 window.anime = require('animejs/lib/anime.min');
+
+require('./customjs');
+require('./chat');
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 500) {
