@@ -60,7 +60,20 @@
 
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('/js/admin.js') }}"></script>
+<script>
 
+    let editor = document.querySelector('#editor');
+    if (editor) {
+        ClassicEditor
+            .create(editor, {
+                language: 'fa'
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+
+</script>
 @include('sweet::alert')
 @yield('script')
 </body>

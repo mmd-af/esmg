@@ -61,7 +61,7 @@
                             @foreach($project->categories as $category)
                                 <option value="{{$category->id}}" selected>{{$category->title}}</option>
                             @endforeach
-                                <option value="">------------------</option>
+                            <option value="">------------------</option>
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}">
                                     {{$category->title}}
@@ -95,7 +95,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-12" id=showdesc>
                         <label for="description">توضیحات:</label>
-                        <textarea class="form-control" id="description"
+                        <textarea class="form-control" id="editor"
                                   name="description">{{ $project->description }}</textarea>
                     </div>
                     <div class="form-group col-md-3">
@@ -226,9 +226,5 @@
                 <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
             </form>
         </div>
-
-
     </div>
-
-
 @endsection

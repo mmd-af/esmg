@@ -4,12 +4,13 @@ require("jquery.easing");
 require("sweetalert");
 require("./files/jquery.czMore-latest");
 require("lightbox2/dist/js/lightbox.js");
+window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 
-(function($) {
+(function ($) {
     "use strict"; // Start of use strict
 
     // Toggle the side navigation
-    $("#sidebarToggle, #sidebarToggleTop").on("click", function(e) {
+    $("#sidebarToggle, #sidebarToggleTop").on("click", function (e) {
         $("body").toggleClass("sidebar-toggled");
         $(".sidebar").toggleClass("toggled");
         if ($(".sidebar").hasClass("toggled")) {
@@ -30,7 +31,7 @@ require("lightbox2/dist/js/lightbox.js");
     }
 
     // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
-    $("body.fixed-nav .sidebar").on("mousewheel DOMMouseScroll wheel", function(
+    $("body.fixed-nav .sidebar").on("mousewheel DOMMouseScroll wheel", function (
         e
     ) {
         if ($(window).width() > 768) {
@@ -42,7 +43,7 @@ require("lightbox2/dist/js/lightbox.js");
     });
 
     // Scroll to top button appear
-    $(document).on("scroll", function() {
+    $(document).on("scroll", function () {
         var scrollDistance = $(this).scrollTop();
         if (scrollDistance > 100) {
             $(".scroll-to-top").fadeIn();
@@ -52,7 +53,7 @@ require("lightbox2/dist/js/lightbox.js");
     });
 
     // Smooth scrolling using jQuery easing
-    $(document).on("click", "a.scroll-to-top", function(e) {
+    $(document).on("click", "a.scroll-to-top", function (e) {
         var $anchor = $(this);
         $("html, body")
             .stop()

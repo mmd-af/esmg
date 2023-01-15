@@ -124,7 +124,7 @@
                 <div class="form-row py-2">
                     <div class="form-group col-md-12" id=showdesc>
                         <label for="description">توضیحات:</label>
-                        <textarea class="form-control" id="description"
+                        <textarea class="form-control" id="editor"
                                   name="description">{{ old('description') }}</textarea>
                     </div>
 
@@ -142,7 +142,5 @@
 
             </form>
         </div>
-
     </div>
-
 @endsection
