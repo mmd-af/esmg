@@ -24,7 +24,6 @@
         "tailwindcss": "^2.0.2"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^35.4.0",
         "animejs": "^3.2.1",
         "bootstrap": "^4.5.0",
         "bourbon": "^7.0.0",

@@ -4,7 +4,6 @@ require("jquery.easing");
 require("sweetalert");
 require("./files/jquery.czMore-latest");
 require("lightbox2/dist/js/lightbox.js");
-window.ClassicEditor = require('@ckeditor/ckeditor5-build-classic');
 
 (function ($) {
     "use strict"; // Start of use strict

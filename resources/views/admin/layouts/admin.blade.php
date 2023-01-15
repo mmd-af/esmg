@@ -60,17 +60,36 @@
 
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('/js/admin.js') }}"></script>
+<script src="{{asset('/js/ckeditor5/build/ckeditor.js')}}"></script>
 <script>
 
     let editor = document.querySelector('#editor');
     if (editor) {
-        ClassicEditor
+        const watchdog = new CKSource.EditorWatchdog();
+        window.watchdog = watchdog;
+        watchdog.setCreator((element, config) => {
+            return CKSource.Editor
+                .create(element, config)
+                .then(editor => {
+                    return editor;
+                })
+        });
+        watchdog.setDestructor(editor => {
+            return editor.destroy();
+        });
+        watchdog.on('error', handleError);
+        watchdog
             .create(editor, {
-                language: 'fa'
+                licenseKey: '',
             })
-            .catch(error => {
-                console.error(error);
-            });
+            .catch(handleError);
+
+        function handleError(error) {
+            console.error('Oops, something went wrong!');
+            console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+            console.warn('Build id: 2k66oma2gxwo-a5l9h4t0gr83');
+            console.error(error);
+        }
     }
 
 </script>
