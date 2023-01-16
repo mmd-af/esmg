@@ -8,12 +8,10 @@
             <button>
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
-
         </div>
         <ul class="messages">
             <li class="other">چه کمکی میخوای؟</li>
         </ul>
-        <div class="text-box" contenteditable="true" disabled="true" style="display: none"></div>
         <form action="" method="post">
             @csrf
             <input class="form-control" placeholder="شماره تماس" type="text" name="phone">

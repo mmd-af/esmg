@@ -20,7 +20,7 @@ class MessageAjaxController extends Controller
         $this->validate($request, ['phone' => 'required', 'description' => 'required']);
         if ($request->ajax()) {
             $this->messageRepository->store($request);
-            return response()->json([$request->all()]);
+            return response()->json(['success']);
         }
     }
 }

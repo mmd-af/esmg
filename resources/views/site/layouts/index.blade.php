@@ -34,6 +34,42 @@
 <script src="{{asset('js/site.js')}}"></script>
 <script src="{{asset('js/scrollreveal.js')}}"></script>
 <script>
+    let setCategory = document.getElementById('setCategory');
+    $(document).ready(function () {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'GET',
+            url: '{{ route('site.categories.ajax.getCategory') }}',
+            success: function (response) {
+                setCategory.innerHTML= `
+                          <li class="nav-item">
+                        <a class="nav-link mx-2 text-light" href="{{ route('site.projects.index') }}">پروژه های ما</a>
+                    </li>`;
+                response.forEach((data) => {
+                    let catLink = '{{ route('site.categories.show', ':slug') }}';
+                    catLink = catLink.replace(':slug', data.slug);
+                    let categoryData = `
+                          <li class="nav-item">
+                        <a class="nav-link mx-2 text-light" href="${catLink}">${data.title}</a>
+                    </li>`;
+                    setCategory.innerHTML += categoryData;
+                })
+            }
+        }).fail(function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'خطا!!',
+                text: 'یه جای کار میلنگه'
+            });
+        });
+    });
+
+</script>
+<script>
     (function scrollReveal() {
         window.sr = ScrollReveal();
         sr.reveal('.reveal-content', {
