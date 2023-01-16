@@ -97,7 +97,6 @@
                         <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> تغییر
                             لوگو</a>
                         <input id="thumbnail" data-preview="holder" name="logo_image" class="form-control" type="text"
-                               name="filepath"
                                value="{{$project->logo_image}}">
                         <div id="holder" style="margin-top:10px;max-height:100px;"></div>
                         <img class="img-fluid" src="{{$project->logo_image}}" style="margin-top:10px;max-height:100px;"
@@ -107,10 +106,11 @@
                         <a id="primaryImage" data-input="thumbnail1" data-preview="holder1" class="btn btn-primary">تغییر
                             عکس
                             اصلی</a>
-                        <input id="thumbnail1" name="primary_image" class="form-control" type="text" name="filepath1"
+                        <input id="thumbnail1" name="primary_image" class="form-control" type="text"
                                value="{{$project->primary_image}}">
                         <div id="holder1" style="margin-top:10px;max-height:100px;"></div>
-                        <img class="img-fluid" src="{{$project->primary_image}}" style="margin-top:10px;max-height:100px;"
+                        <img class="img-fluid" src="{{$project->primary_image}}"
+                             style="margin-top:10px;max-height:100px;"
                              alt="">
                     </div>
                 </div>

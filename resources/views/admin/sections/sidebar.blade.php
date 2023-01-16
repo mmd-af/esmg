@@ -60,6 +60,11 @@
                 <i class="fa-solid fa-guitar"></i>
                 <span>کنترل اسلایدشو</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.customers.index')}}">
+                <i class="fa-solid fa-guitar"></i>
+                <span>مشتریان ما</span></a>
+        </li>
 @endif
 <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

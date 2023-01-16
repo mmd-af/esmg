@@ -61,13 +61,13 @@
                     <div class="form-group col-md-4 bg-secondary p-3">
                         <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> انتخاب
                             لوگو</a>
-                        <input id="thumbnail" name="logo_image" class="form-control" type="text" name="filepath">
+                        <input id="thumbnail" name="logo_image" class="form-control" type="text">
                         <div id="holder" style="margin-top:10px;max-height:100px;"></div>
                     </div>
                     <div class="form-group col-md-4 bg-secondary p-3">
                         <a id="primaryImage" data-input="thumbnail1" data-preview="holder1" class="btn btn-primary">عکس
                             اصلی</a>
-                        <input id="thumbnail1" name="primary_image" class="form-control" type="text" name="filepath1">
+                        <input id="thumbnail1" name="primary_image" class="form-control" type="text">
                         <div id="holder1" style="margin-top:10px;max-height:100px;"></div>
                     </div>
                 </div>
