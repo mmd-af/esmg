@@ -10,7 +10,7 @@
                             <div class="row">
                                 <div class="col-sm-12 col-md-8 overflow-hidden"
                                      style="background-color: rgba(255,255,255,0.5);height: 500px;">
-                                    <img src="{{ asset('upload/projects/' . $project->primary_image) }}"
+                                    <img src="{{ $project->primary_image }}"
                                          class="img-fluid w-100 content-zoom"
                                          alt="{{$project->project_name}}">
                                 </div>
@@ -21,7 +21,7 @@
                                             <div class="d-flex justify-content-between">
                                                 <p><strong>نام کارفرما: </strong>{{$project->employer_name}}</p>
                                                 <img class="img-fluid rounded-circle w-25"
-                                                     src="{{ url('/upload/projects/' . $project->logo_image) }}"
+                                                     src="{{  $project->logo_image }}"
                                                      alt="{{$project->employer_name}}"/>
                                             </div>
                                         </div>
@@ -38,7 +38,7 @@
                                 <div class="text-center text-light sm-small py-3 content-zoom"
                                      style="background-color: rgba(0,0,0,0.5)">
                                     <h1>{{$project->project_name}}</h1>
-                                    <p class="px-5">{{Str::limit($project->description,450)}}</p>
+                                    <p class="px-5">{{Str::limit(strip_tags($project->description),450)}}</p>
                                     <a href="{{$project->link}}"
                                        class="btn btn-outline-light btn-sm rounded-pill px-5 py-2">جزئیات بیشتر</a>
                                 </div>
