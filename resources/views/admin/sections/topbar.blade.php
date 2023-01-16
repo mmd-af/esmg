@@ -51,7 +51,8 @@
                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Alerts -->
-                <span class="badge badge-danger badge-counter">3+</span>
+                <div id="checkNewMessage">
+                </div>
             </a>
             <!-- Dropdown - Alerts -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in text-right"
@@ -61,7 +62,7 @@
                 </h6>
                 <div id="getMessages">
                 </div>
-                <a class="dropdown-item text-center small text-gray-500" href="#"> مشاهده تمام </a>
+{{--                <a class="dropdown-item text-center small text-gray-500" href="#"> مشاهده تمام </a>--}}
             </div>
         </li>
         <div class="topbar-divider d-none d-sm-block"></div>

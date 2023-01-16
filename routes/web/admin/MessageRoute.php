@@ -9,6 +9,14 @@ Route::group(['middleware' => ['web', 'auth', 'AdminTeach'], 'namespace' => 'App
                 'as' => 'getMessage',
                 'uses' => 'MessageAjaxController@getMessage'
             ]);
+            Route::get('/checkMessage', [
+                'as' => 'checkMessage',
+                'uses' => 'MessageAjaxController@checkMessage'
+            ]);
+            Route::post('/markMessage', [
+                'as' => 'markMessage',
+                'uses' => 'MessageAjaxController@markMessage'
+            ]);
         });
     });
 });

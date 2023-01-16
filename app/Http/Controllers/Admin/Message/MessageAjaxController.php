@@ -21,4 +21,16 @@ class MessageAjaxController extends Controller
             return $this->messageRepository->getMessage();
         }
     }
+    public function checkMessage(Request $request)
+    {
+        if ($request->ajax()) {
+            return $this->messageRepository->checkMessage();
+        }
+    }
+    public function markMessage(Request $request)
+    {
+        if ($request->ajax()) {
+            return $this->messageRepository->markMessage();
+        }
+    }
 }

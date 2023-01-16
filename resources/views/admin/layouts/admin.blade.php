@@ -96,7 +96,28 @@
                 })
             }
         });
+        $.ajax({
+            type: 'POST',
+            url: '{{ route('admin.messages.ajax.markMessage') }}',
+        });
     }
+</script>
+<script>
+    let checkNewMessage = document.getElementById('checkNewMessage');
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        type: 'GET',
+        url: '{{ route('admin.messages.ajax.checkMessage') }}',
+        success: function (response) {
+            if (response > 0) {
+                checkNewMessage.innerHTML = `<span class="badge badge-danger badge-counter">${response}+</span>`;
+            }
+        }
+    });
 </script>
 
 <script>
