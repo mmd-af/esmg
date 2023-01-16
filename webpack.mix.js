@@ -19,4 +19,4 @@ mix.js('resources/js/site/site.js', 'public/js')
     .copy('resources/css/general-css/', 'public/css/')
     .copy('resources/js/general-js/', 'public/js/')
     .copy('node_modules/scrollreveal/dist/scrollreveal.js', 'public/js')
-    .copy('resources/js/admin/files/ckeditor5', 'public/js/ckeditor5');
+    .copy('resources/js/admin/files/ckeditor', 'public/js/ckeditor');

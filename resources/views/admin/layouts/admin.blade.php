@@ -59,45 +59,17 @@
 @include('admin.sections.scroll_top')
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('/js/admin.js') }}"></script>
-<script src="{{asset('/js/ckeditor5/build/ckeditor.js')}}"></script>
+<script src="{{asset('/js/ckeditor/ckeditor.js')}}"></script>
 <script>
 
     let editor = document.querySelector('#editor');
     if (editor) {
-        const watchdog = new CKSource.EditorWatchdog();
-        window.watchdog = watchdog;
-        watchdog.setCreator((element, config) => {
-            return CKSource.Editor
-                .create(element, config)
-                .then(editor => {
-                    return editor;
-                })
-        });
-        watchdog.setDestructor(editor => {
-            return editor.destroy();
-        });
-        watchdog.on('error', handleError);
-        watchdog
-            .create(editor, {
-                licenseKey: '',
-            })
-            .catch(handleError);
-
-        function handleError(error) {
-            console.error('Oops, something went wrong!');
-            console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
-            console.warn('Build id: 2k66oma2gxwo-a5l9h4t0gr83');
-            console.error(error);
-        }
+        var options = {
+            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        };
+        CKEDITOR.replace(editor, options);
     }
-    var options = {
-        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-    };
-    $(editor).ckeditor(options);
-
 
 </script>
 @include('sweet::alert')
