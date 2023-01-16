@@ -60,17 +60,20 @@
 <!-- Bootstrap core JavaScript-->
 <script src="{{ asset('/js/admin.js') }}"></script>
 <script src="{{asset('/js/ckeditor/ckeditor.js')}}"></script>
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
 
     let editor = document.querySelector('#editor');
     if (editor) {
         var options = {
-            filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-            filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+            filebrowserImageBrowseUrl: '/filemanager?type=Images',
+            filebrowserBrowseUrl: '/filemanager?type=Files',
         };
         CKEDITOR.replace(editor, options);
     }
 
+    $('#logo').filemanager('image');
+    $('#primaryImage').filemanager('image');
 </script>
 @include('sweet::alert')
 @yield('script')

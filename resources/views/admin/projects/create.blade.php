@@ -4,40 +4,6 @@
     Create Tests
 @endsection
 
-@section('script')
-    <script>
-
-        $('#logo_image').change(function () {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
-        });
-
-        $('#primary_image').change(function () {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
-        });
-
-        $('#customer_image').change(function () {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
-        });
-
-        $('#images').change(function () {
-            //get the file name
-            var fileName = $(this).val();
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
-        });
-
-
-    </script>
-@endsection
 @section('content')
     <!-- Content Row -->
     <div class="row">
@@ -91,34 +57,18 @@
                                value="{{ old('year_enforce') }}">
                     </div>
                 </div>
-                <div class="form-row py-2" style="background-color: rgba(0,0,0,0.1)">
-                    <div class="form-group col-md-3">
-                        <label for="logo_image">لوگو:</label>
-                        <div class="custom-file">
-                            <input type="file" name="logo_image" class="custom-file-input" id="logo_image">
-                            <label class="custom-file-label" for="logo_image"> انتخاب فایل </label>
-                        </div>
+                <div class="form-row py-2">
+                    <div class="form-group col-md-4 bg-secondary p-3">
+                        <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> انتخاب
+                            لوگو</a>
+                        <input id="thumbnail" name="logo_image" class="form-control" type="text" name="filepath">
+                        <div id="holder" style="margin-top:10px;max-height:100px;"></div>
                     </div>
-                    <div class="form-group col-md-3">
-                        <label for="primary_image">عکس اصلی:</label>
-                        <div class="custom-file">
-                            <input type="file" name="primary_image" class="custom-file-input" id="primary_image">
-                            <label class="custom-file-label" for="primary_image"> انتخاب فایل </label>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="customer_image">رضایت مشتری:</label>
-                        <div class="custom-file">
-                            <input type="file" name="customer_image" class="custom-file-input" id="customer_image">
-                            <label class="custom-file-label" for="customer_image"> انتخاب فایل </label>
-                        </div>
-                    </div>
-                    <div class="form-group col-md-3">
-                        <label for="images"> انتخاب تصاویر </label>
-                        <div class="custom-file">
-                            <input type="file" name="images[]" multiple class="custom-file-input" id="images">
-                            <label class="custom-file-label" for="images"> انتخاب فایل ها </label>
-                        </div>
+                    <div class="form-group col-md-4 bg-secondary p-3">
+                        <a id="primaryImage" data-input="thumbnail1" data-preview="holder1" class="btn btn-primary">عکس
+                            اصلی</a>
+                        <input id="thumbnail1" name="primary_image" class="form-control" type="text" name="filepath1">
+                        <div id="holder1" style="margin-top:10px;max-height:100px;"></div>
                     </div>
                 </div>
                 <div class="form-row py-2">
@@ -127,8 +77,6 @@
                         <textarea class="form-control" id="editor"
                                   name="description">{{ old('description') }}</textarea>
                     </div>
-
-
                     <div class="form-group col-md-3">
                         <label for="is_active">وضعیت</label>
                         <select class="form-control" id="is_active" name="is_active">
@@ -139,7 +87,6 @@
                 </div>
                 <button class="btn btn-outline-primary mt-5" type="submit">ثبت</button>
                 <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
-
             </form>
         </div>
     </div>

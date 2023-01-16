@@ -34,59 +34,32 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
             'project_name' => 'required|string|max:255',
             'slug' => 'required|string|max:255',
+            'interval' => 'required|integer|max:20000',
             'employer_name' => 'required|string|max:255',
             'project_location' => 'required|string|max:255',
-            'logo_image' => 'required|image|max:500',
-            'primary_image' => 'required|image|max:500',
-            'customer_image' => 'nullable|image|max:500',
-            'description' => 'required|string',
             'year_enforce' => 'required|string|max:255',
+            'logo_image' => 'required',
+            'primary_image' => 'required',
+            'description' => 'required|string',
             'category' => 'required',
-            'is_active' => 'required',
-            'images' => 'required',
-            'images.*' => 'mimes:jpg,jpeg,png,svg',
+            'is_active' => 'required'
         ]);
-
-        if ($request->customer_image) {
-            $customer_image = $request->customer_image;
-        } else {
-            $customer_image = null;
-        }
-        $projectImageController = new ProjectImageController();
-        $fileNameImages = $projectImageController->upload(
-            $request->logo_image,
-            $request->primary_image,
-            $request->customer_image,
-            $request->images
-        );
-
-        $project = Project::create([
-            'project_name' => $request->project_name,
-            'slug' => Str::slug($request->input('slug')),
-            'employer_name' => $request->employer_name,
-            'project_location' => $request->project_location,
-            'logo_image' => $fileNameImages['fileNameLogoImage'],
-            'primary_image' => $fileNameImages['fileNamePrimaryImage'],
-            'customer_image' => $fileNameImages['fileNameCustomerImage'],
-            'description' => $request->description,
-            'year_enforce' => $request->year_enforce,
-            'interval' => $request->interval,
-            'is_active' => $request->is_active,
-        ]);
-
+        $project= new Project();
+        $project->project_name= $request->project_name;
+        $project->slug= Str::slug($request->input('slug'));
+        $project->interval= $request->interval;
+        $project->employer_name= $request->employer_name;
+        $project->project_location= $request->project_location;
+        $project->year_enforce= $request->year_enforce;
+        $project->logo_image= $request->logo_image;
+        $project->primary_image= $request->primary_image;
+        $project->description= $request->description;
+        $project->is_active= $request->is_active;
+        $project->save();
         $project->categories()->attach($request->input('category'));
-
-        foreach ($fileNameImages['fileNameImages'] as $fileNameImage) {
-            ProjectImage::create([
-                'project_id' => $project->id,
-                'image' => $fileNameImage
-            ]);
-        }
-
         alert()->success('پروژه ی مورد نظر ایجاد شد', 'باتشکر');
         return redirect()->route('projects.index');
     }
