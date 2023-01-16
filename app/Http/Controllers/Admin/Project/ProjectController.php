@@ -88,24 +88,26 @@ class ProjectController extends Controller
 
         $request->validate([
             'project_name' => 'required|string|max:255',
+            'interval' => 'required|integer|max:20000',
             'employer_name' => 'required|string|max:255',
             'project_location' => 'required|string|max:255',
-            'description' => 'required|string',
             'year_enforce' => 'required|string|max:255',
+            'logo_image' => 'required',
+            'primary_image' => 'required',
+            'description' => 'required|string',
             'category' => 'required',
-            'interval' => 'required',
-            'is_active' => 'required',
+            'is_active' => 'required'
         ]);
-
-        $project->update([
-            'project_name' => $request->project_name,
-            'employer_name' => $request->employer_name,
-            'project_location' => $request->project_location,
-            'description' => $request->description,
-            'year_enforce' => $request->year_enforce,
-            'interval' => $request->interval,
-            'is_active' => $request->is_active,
-        ]);
+        $project->project_name= $request->project_name;
+        $project->interval= $request->interval;
+        $project->employer_name= $request->employer_name;
+        $project->project_location= $request->project_location;
+        $project->year_enforce= $request->year_enforce;
+        $project->logo_image= $request->logo_image;
+        $project->primary_image= $request->primary_image;
+        $project->description= $request->description;
+        $project->is_active= $request->is_active;
+        $project->save();
         $project->categories()->sync($request->input('category'));
         alert()->success('پروژه ی مورد نظر ویرایش شد', 'باتشکر');
         return redirect()->route('projects.index');

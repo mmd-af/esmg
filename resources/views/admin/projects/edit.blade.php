@@ -92,6 +92,28 @@
                                value="{{ $project->year_enforce }}">
                     </div>
                 </div>
+                <div class="form-row py-2">
+                    <div class="form-group col-md-4 bg-secondary p-3">
+                        <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> تغییر
+                            لوگو</a>
+                        <input id="thumbnail" data-preview="holder" name="logo_image" class="form-control" type="text"
+                               name="filepath"
+                               value="{{$project->logo_image}}">
+                        <div id="holder" style="margin-top:10px;max-height:100px;"></div>
+                        <img class="img-fluid" src="{{$project->logo_image}}" style="margin-top:10px;max-height:100px;"
+                             alt="">
+                    </div>
+                    <div class="form-group col-md-4 bg-secondary p-3">
+                        <a id="primaryImage" data-input="thumbnail1" data-preview="holder1" class="btn btn-primary">تغییر
+                            عکس
+                            اصلی</a>
+                        <input id="thumbnail1" name="primary_image" class="form-control" type="text" name="filepath1"
+                               value="{{$project->primary_image}}">
+                        <div id="holder1" style="margin-top:10px;max-height:100px;"></div>
+                        <img class="img-fluid" src="{{$project->primary_image}}" style="margin-top:10px;max-height:100px;"
+                             alt="">
+                    </div>
+                </div>
                 <div class="form-row">
                     <div class="form-group col-md-12" id=showdesc>
                         <label for="description">توضیحات:</label>
@@ -110,119 +132,6 @@
                     </div>
                 </div>
                 <button class="btn btn-outline-primary mt-5" type="submit">ویرایش</button>
-                <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
-            </form>
-        </div>
-        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
-            <div class="mb-4 text-center text-md-right">
-                <div class="row">
-                    <div class="col-12 col-md-12 mb-5">
-                        <h5>تصویر اصلی : </h5>
-                    </div>
-                    <div class="col-12 col-md-3 mb-5">
-                        <div class="card">
-                            <img class="card-img-top"
-                                 src="{{ url('/upload/projects/' . $project->primary_image) }}"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
-            <div class="mb-4 text-center text-md-right">
-                <div class="row">
-                    <div class="col-12 col-md-12 mb-5">
-                        <h5>تصاویر : </h5>
-                    </div>
-                    @foreach ($project->images as $image)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <img class="card-img-top" src="{{ url('/upload/projects/' . $image->image) }}"
-                                     alt="">
-                                <div class="card-body text-center">
-                                    <form action="{{ route('projects.images.destroy', ['project' => $project->id]) }}"
-                                          method="post">
-                                        @method('DELETE')
-                                        @csrf
-                                        <input type="hidden" name="image_id" value="{{ $image->id }}">
-                                        <button class="btn btn-danger btn-sm mb-3" type="submit">حذف</button>
-                                    </form>
-                                    <form
-                                        action="{{ route('projects.images.set_primary', ['project' => $project->id]) }}"
-                                        method="post">
-                                        @method('PUT')
-                                        @csrf
-                                        <input type="hidden" name="image_id" value="{{ $image->id }}">
-                                        <button class="btn btn-primary btn-sm mb-3" type="submit">انتخاب به عنوان تصویر
-                                            اصلی
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
-            <form action="{{ route('projects.images.add', ['project' => $project->id]) }}" method="POST"
-                  enctype="multipart/form-data">
-                @csrf
-                <div class="row">
-                    <div class="form-group col-md-4">
-                        <label for="images"> انتخاب تصاویر </label>
-                        <div class="custom-file">
-                            <input type="file" name="images[]" multiple class="custom-file-input" id="images">
-                            <label class="custom-file-label" for="images"> انتخاب فایل ها </label>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn btn-outline-primary mt-5" type="submit">اضافه کردن</button>
-                <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
-            </form>
-        </div>
-
-
-        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
-
-            <form action="{{ route('projects.images.logo', ['project' => $project->id]) }}" method="POST"
-                  enctype="multipart/form-data">
-                @csrf
-                <div class="row">
-                    <div class="form-group col-md-4">
-                        <label for="logoimage">تغییر لوگو</label>
-                        <div class="custom-file">
-                            <input type="file" name="logo_image" class="custom-file-input" id="logoimage">
-                            <label class="custom-file-label" for="images"> انتخاب فایل ها </label>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn btn-outline-primary mt-5" type="submit">تغییر</button>
-                <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
-            </form>
-        </div>
-
-
-        <div class="col-xl-12 col-md-12 mb-4 p-4 bg-white">
-
-            <form action="{{ route('projects.images.customer', ['project' => $project->id]) }}" method="POST"
-                  enctype="multipart/form-data">
-                @csrf
-                <div class="row">
-                    <div class="form-group col-md-4">
-                        <label for="customerimage">تغییر رضایت مشتری</label>
-                        <div class="custom-file">
-                            <input type="file" name="customer_image" class="custom-file-input" id="customerimage">
-                            <label class="custom-file-label" for="images"> انتخاب فایل ها </label>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn btn-outline-primary mt-5" type="submit">تغییر</button>
                 <a href="{{ route('projects.index') }}" class="btn btn-dark mt-5 mr-3">بازگشت</a>
             </form>
         </div>
