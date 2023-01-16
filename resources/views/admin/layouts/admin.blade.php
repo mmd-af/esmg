@@ -61,8 +61,45 @@
 <script src="{{ asset('/js/admin.js') }}"></script>
 <script src="{{asset('/js/ckeditor/ckeditor.js')}}"></script>
 <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
-<script>
 
+<script>
+    function getMessages() {
+        let setMessage = document.getElementById('getMessages');
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'GET',
+            url: '{{ route('admin.messages.ajax.getMessage') }}',
+            success: function (response) {
+                setMessage.innerHTML = '';
+                response.forEach((data) => {
+                    {{--let catLink = '{{ route('site.categories.show', ':slug') }}';--}}
+                    {{--catLink = catLink.replace(':slug', data.slug);--}}
+                    let messageData = `
+        <a class="dropdown-item d-flex justify-content-between" href="#">
+                    <div>
+                        <div class="small text-gray-500">${data.phone}</div>
+                        <span class="font-weight-bold">${data.description}</span>
+                    </div>
+
+                    <div class="mr-3">
+                        <div class="icon-circle bg-primary">
+                            <i class="fas fa-file-alt text-white"></i>
+                        </div>
+                    </div>
+
+                </a>`;
+                    setMessage.innerHTML += messageData;
+                })
+            }
+        });
+    }
+</script>
+
+<script>
     let editor = document.querySelector('#editor');
     if (editor) {
         var options = {
