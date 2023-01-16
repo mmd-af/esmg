@@ -37,4 +37,20 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
     config.language = 'fa';
+
+
+    config.stylesSet = [
+        {
+            name: 'Responsive Image',
+            element: 'img',
+            attributes: { 'class': 'img-fluid' }
+        },
+        {
+            name: 'Width 50%',
+            element: 'img',
+            attributes: { 'class': 'w-50' }
+        }
+
+    ];
+
 };

@@ -1,6 +1,12 @@
 <div class="container-fluid bg-gradiant-3 py-5 reveal-content">
     <div class="container overflow-hidden">
-        <h1 class="text-white animEffect">پروژه های ما</h1>
+        <div class="d-flex justify-content-between">
+            <h1 class="text-white animEffect">پروژه های ما</h1>
+            <p class="text-white animEffect">
+                <a href="{{route('site.projects.index')}}"
+                   class="btn btn-outline-light btn-sm rounded-pill px-5 py-2">نمایش همه ی پروژه ها</a>
+            </p>
+        </div>
         <div class="overflow-hidden" style="border-radius: 30px">
             <div id="carouselExampleDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -39,7 +45,7 @@
                                      style="background-color: rgba(0,0,0,0.5)">
                                     <h1>{{$project->project_name}}</h1>
                                     <p class="px-5">{{Str::limit(strip_tags($project->description),450)}}</p>
-                                    <a href="{{$project->link}}"
+                                    <a href="{{route('site.projects.show',$project->slug)}}"
                                        class="btn btn-outline-light btn-sm rounded-pill px-5 py-2">جزئیات بیشتر</a>
                                 </div>
                             </div>

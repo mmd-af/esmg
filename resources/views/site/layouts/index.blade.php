@@ -15,7 +15,7 @@
 </head>
 <body>
 @include('site.sections.navbar')
-<div class="container pb-3 my-3 text-white text-center content-zoom">
+<div class="container hideHeader pb-3 my-3 text-white text-center content-zoom">
     <div class="titleEffect">
         <span class="letter">ارم</span>
         <span class="letter">صنعت</span>
