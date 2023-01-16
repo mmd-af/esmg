@@ -2,10 +2,9 @@ window.$ = window.jQuery = require("jquery");
 require("./bootstrap");
 require('./bootstrap.bundle.min');
 window.anime = require('animejs/lib/anime.min');
-
 require('./customjs');
 require('./chat');
-
+window.Swal = require('sweetalert2');
 $(window).scroll(function () {
     if ($(this).scrollTop() > 500) {
         $('.sticky-top').css('top', '0px');

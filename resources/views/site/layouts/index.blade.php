@@ -33,34 +33,6 @@
 @include('site.sections.chat')
 <script src="{{asset('js/site.js')}}"></script>
 <script src="{{asset('js/scrollreveal.js')}}"></script>
-{{--<script>--}}
-{{--    window.addEventListener("load", function () {--}}
-{{--        let carousel2 = document.querySelector('.carousel2');--}}
-{{--        $.ajaxSetup({headers: {'csrftoken': '{{ csrf_token() }}'}});--}}
-{{--        $.ajax({--}}
-{{--            type: 'get',--}}
-{{--            url: "{{ route('site.slideshows.ajax.getData') }}",--}}
-{{--            success: function (response) {--}}
-{{--                carousel2.innerHTML = '';--}}
-{{--                response.forEach(function (item, index) {--}}
-{{--                    let slide = `--}}
-{{--        <div class="carousel__face"--}}
-{{--             style="background-image: url(${item.images.url})">--}}
-{{--            <div class="m-auto text-center text-light">--}}
-{{--                <h4>${item.title}</h4>--}}
-{{--                <p class="small">--}}
-{{--               ${item.description}--}}
-{{--                </p>--}}
-{{--            </div>--}}
-{{--        </div>`;--}}
-{{--                    carousel2.innerHTML += slide;--}}
-{{--                });--}}
-{{--            }--}}
-{{--        });--}}
-{{--    });--}}
-
-{{--</script>--}}
-
 <script>
     (function scrollReveal() {
         window.sr = ScrollReveal();
@@ -74,6 +46,36 @@
             viewFactor: 0
         }, 150);
     })();
+</script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $(".btn-submit").click(function (e) {
+        e.preventDefault();
+        var phone = $("input[name=phone]").val();
+        var description = $("textarea[name=description]").val();
+        $.ajax({
+            type: 'POST',
+            url: "{{ route('site.messages.ajax.store') }}",
+            data: {phone: phone, description: description},
+        }).done(function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'متشکریم...',
+                text: 'پیام شما با موفقیت ارسال شد.'
+            });
+        }).fail(function () {
+            Swal.fire({
+                icon: 'error',
+                title: 'خطا!!',
+                text: 'شماره ی همراه و متن پیام اجباری می باشد.'
+            });
+        });
+    });
 </script>
 @yield('script')
 </body>

@@ -2,3 +2,4 @@
 @import './bootstrap.min.css';
 @import './custom.css';
 @import "./chat.css";
+@import "sweetalert2/dist/sweetalert2.min.css";

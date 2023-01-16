@@ -3,7 +3,6 @@ require("bootstrap/dist/js/bootstrap.bundle");
 require("jquery.easing");
 require("sweetalert");
 require("./files/jquery.czMore-latest");
-require("lightbox2/dist/js/lightbox.js");
 
 (function ($) {
     "use strict"; // Start of use strict

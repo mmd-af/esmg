@@ -18,7 +18,7 @@
             @csrf
             <input class="form-control" placeholder="شماره تماس" type="text" name="phone">
             <textarea class="form-control mt-3" name="description" placeholder="پیام"></textarea>
-            <button type="submit" class="btn btn-primary mt-2">ارسال</button>
+            <button type="submit" class="btn btn-primary mt-2 btn-submit">ارسال</button>
         </form>
         <div class="footer">
             <div class="text-box" contenteditable="true" disabled="true" style="display: none"></div>

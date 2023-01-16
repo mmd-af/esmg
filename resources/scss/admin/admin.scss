@@ -1,21 +1,9 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
-
-// Import Custom SB Admin 2 Variables (Overrides Default Bootstrap Variables)
 @import "variables.scss";
-
-// Import Bootstrap
 @import "~bootstrap/scss/bootstrap.scss";
-
-@import "~lightbox2/dist/css/lightbox.css";
-
-// @import "./files/icons.min.css";
-// @import "./files/plugins.css";
-// Import Custom SB Admin 2 Mixins and Components
 @import "mixins.scss";
 @import "global.scss";
 @import "utilities.scss";
-
-// Custom Components
 @import "dropdowns.scss";
 @import "navs.scss";
 @import "buttons.scss";
@@ -24,7 +12,6 @@
 @import "login.scss";
 @import "error.scss";
 @import "footer.scss";
-
 @font-face {
   font-family: "Yekan";
   src: url("../../font/Yekan.eot");
