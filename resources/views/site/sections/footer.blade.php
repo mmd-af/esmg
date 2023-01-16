@@ -43,7 +43,7 @@
     <hr/>
     <div class="row flex-center pb-3">
         <div class="col-md-6 order-0 content-zoom">
-            <p class="text-200 text-center text-md-start text-white">Copyright &copy; esmg.co.ir 2022 </p>
+            <p class="text-200 text-center text-md-start text-white">Copyright &copy; esmg.co.ir {{date('Y')}} - طراحی و توسعه - شرکت ایده پردازان آریو وب</p>
         </div>
     </div>
 </div>
