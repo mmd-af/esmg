@@ -2,10 +2,12 @@
     <div class="container overflow-hidden">
         <h1 class="text-primary-1 animEffect">مشتریان ما:</h1>
         <div class="row">
-            @foreach ($projects as $project)
+            @foreach ($customers as $customer)
                 <div class="col-xs-6 col-md-4 col-lg-3 text-center p-5 content-zoom">
-                    <img class="img-fluid w-50 rounded-circle border border-3 border-primary-1" src="{{ asset('upload/projects/' . $project->logo_image) }}"
-                         alt="{{ $project->project_name }}">
+                    <img class="img-fluid w-50 rounded-circle border border-3 border-primary-1"
+                         src="{{ $customer->images->url }}"
+                         alt="{{ $customer->title }}">
+                    <h6>{{$customer->title}}</h6>
                 </div>
             @endforeach
         </div>

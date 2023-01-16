@@ -20,7 +20,8 @@ class HomeController extends Controller
     {
         $slideShows = $this->HomeRepository->getSlideShow();
         $projects = $this->HomeRepository->getProjects();
-        return view('site.index', compact('slideShows', 'projects'));
+        $customers = $this->HomeRepository->getCustomers();
+        return view('site.index', compact('slideShows', 'projects', 'customers'));
     }
 
 //    public function aboutus()
