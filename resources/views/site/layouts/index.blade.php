@@ -45,7 +45,7 @@
             type: 'GET',
             url: '{{ route('site.categories.ajax.getCategory') }}',
             success: function (response) {
-                setCategory.innerHTML= `
+                setCategory.innerHTML = `
                           <li class="nav-item">
                         <a class="nav-link mx-2 text-light" href="{{ route('site.projects.index') }}">پروژه های ما</a>
                     </li>`;
@@ -99,11 +99,13 @@
             url: "{{ route('site.messages.ajax.store') }}",
             data: {phone: phone, description: description},
         }).done(function () {
+            let closeChat = document.getElementById("closeChat");
             Swal.fire({
                 icon: 'success',
                 title: 'متشکریم...',
                 text: 'پیام شما با موفقیت ارسال شد.'
             });
+            closeChat.click();
         }).fail(function () {
             Swal.fire({
                 icon: 'error',

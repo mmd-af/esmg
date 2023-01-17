@@ -5,7 +5,7 @@
             <span class="title">
                ما اینجا هستیم
             </span>
-            <button>
+            <button id="closeChat">
                 <i class="fa fa-times" aria-hidden="true"></i>
             </button>
         </div>
