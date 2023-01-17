@@ -41,19 +41,19 @@
                 </div>
             </div>
         </li>
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseusers"
-               aria-expanded="true"
-               aria-controls="collapsePages">
-                <i class="fas fa-user"></i>
-                <span> کاربران </span>
-            </a>
-            <div id="collapseusers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <a class="collapse-item" href="#">نمایش کاربران</a>
-                </div>
-            </div>
-        </li>
+{{--        <li class="nav-item">--}}
+{{--            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseusers"--}}
+{{--               aria-expanded="true"--}}
+{{--               aria-controls="collapsePages">--}}
+{{--                <i class="fas fa-user"></i>--}}
+{{--                <span> کاربران </span>--}}
+{{--            </a>--}}
+{{--            <div id="collapseusers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">--}}
+{{--                <div class="bg-white py-2 collapse-inner rounded">--}}
+{{--                    <a class="collapse-item" href="#">نمایش کاربران</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </li>--}}
         <hr class="sidebar-divider">
         <li class="nav-item">
             <a class="nav-link" href="{{route('admin.slideshows.index')}}">
