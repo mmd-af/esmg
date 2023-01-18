@@ -18,17 +18,15 @@
                 @method('put')
                 <div class="form-row">
                     <div class="form-group col-md-12 mt-3">
-                        <div class="form-group col-md-6">
-                            <label for="image">تصویر:</label>
-                            <div class="input-group">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button" id="button-image">انتخاب
-                                    </button>
-                                </div>
-                                <input type="text" id="image" class="form-control" name="url"
-                                       aria-label="Image" aria-describedby="button-image"
-                                       value="{{$slideShow->images->url}}">
-                            </div>
+                        <div class="form-group col-md-4 bg-secondary p-3">
+                            <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> تغییر
+                                تصویر</a>
+                            <input id="thumbnail" data-preview="holder" name="url" class="form-control" type="text"
+                                   value="{{$slideShow->images->url}}">
+                            <div id="holder" style="margin-top:10px;max-height:100px;"></div>
+                            <img class="img-fluid" src="{{$slideShow->images->url}}"
+                                 style="margin-top:10px;max-height:100px;"
+                                 alt="">
                         </div>
                     </div>
                     <div class="form-group col-md-6">
