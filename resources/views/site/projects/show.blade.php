@@ -21,10 +21,10 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid-xxl bg-dark" style="display: block;height: 250px;overflow: hidden;">
+    <div class="container-fluid-xxl bg-dark" style="display: block;height: 400px;overflow: hidden;">
         <img class="w-100" src="{{ $project->primary_image }}" alt="Snow"
-             style="display: block;overflow: hidden;opacity: 0.7">
-        <div class="centered"><h1 class="text-primary-1">{{ $project->project_name }}</h1></div>
+             style="display: block;overflow: hidden;opacity: 0.5">
+        <div class="centered"><h1 class="text-white">{{ $project->project_name }}</h1></div>
     </div>
     <div class="container mt-3 mb-5">
         <div class="row">

@@ -1,26 +1,28 @@
 <div class="container-fluid bg-gradiant-1 reveal-content">
     <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
+        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
             <div class="text-white p-4">
                 <i class="fas fa-address-book fa-3x"></i>
             </div>
             <ul class="list-unstyled mb-md-4 mb-lg-0 text-white content-zoom">
-                <li class="lh-lg"><i class="fas fa-envelope text-white"></i> info@esmg.co.ir</li>
-                <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 09376925054</li>
+                <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 09108430173</li>
+                <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 09177398308</li>
                 <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 071-36240650</li>
             </ul>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 text-white">
+        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg text-white">
             <div class="p-4">
-                <i class="fas fa-hashtag fa-3x"></i>
+{{--                <i class="fas fa-hashtag fa-3x"></i>--}}
+                <i class="fas fa-phone fa-3x"></i>
             </div>
             <ul class="list-unstyled mb-md-4 mb-lg-0 content-zoom">
-                <li class="lh-lg"><i class="fab fa-instagram"></i> @esmg</li>
+                <li class="lh-lg"><i class="fas fa-envelope text-white"></i> info@esmg.co.ir</li>
+                <li class="lh-lg"><i class="fab fa-instagram"></i> esmg@</li>
+                <li class="lh-lg"><i class="fab fa-linkedin"></i> esmg</li>
                 <li class="lh-lg"><i class="fab fa-whatsapp"></i> 09376925054</li>
-                <li class="lh-lg"><i class="fas fa-phone"></i> 071-36240650</li>
             </ul>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
+        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
             <div class="text-white p-4">
                 <i class="fas fa-map-marker-alt fa-3x"></i>
             </div>
@@ -30,7 +32,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-3">
+        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
             <div class="text-white p-4">
                 <i class="fas fa-map fa-3x"></i>
             </div>

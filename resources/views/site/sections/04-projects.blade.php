@@ -17,7 +17,7 @@
                                 <div class="col-sm-12 col-md-8 overflow-hidden"
                                      style="background-color: rgba(255,255,255,0.5);height: 500px;">
                                     <img src="{{ $project->primary_image }}"
-                                         class="img-fluid w-100 content-zoom"
+                                         class="img-fluid p-5 w-100 content-zoom"
                                          alt="{{$project->project_name}}">
                                 </div>
                                 <div class="col-sm-12 col-md-4"

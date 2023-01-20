@@ -19,7 +19,7 @@
                     <div class="form-group col-md-12 mt-3">
                         <div class="form-group col-md-4 bg-secondary p-3">
                             <a id="logo" data-input="thumbnail" data-preview="holder" class="btn btn-primary"> انتخاب
-                                لوگو</a>
+                                تصویر</a>
                             <input id="thumbnail" name="url" class="form-control" type="text">
                             <div id="holder" style="margin-top:10px;max-height:100px;"></div>
                         </div>
