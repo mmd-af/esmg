@@ -139,3 +139,18 @@ body {
 .carousel-caption {
     padding-bottom: 10rem;
 }
+
+.animateForLanding {
+    position: relative;
+    animation: mymove 4s;
+    animation-delay: 1.5s;
+}
+
+@keyframes mymove {
+    from {
+        bottom: 150px;
+    }
+    to {
+        bottom: 0px;
+    }
+}

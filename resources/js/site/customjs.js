@@ -1,25 +1,24 @@
-let testAnim = document.getElementById('testAnim');
-let animation = () => {
-    anime({
-        targets: '.letter',
-        opacity: 1,
-        rotate: {
-            value: 360,
-            duration: 2000,
-            easing: 'easeInExpo'
-        },
-        scale: anime.stagger([0.7, 1], {from: 'center'}),
-        delay: anime.stagger(100, {start: 1000}),
-        translateX: () => {
-            return anime.random(-20, 20);
-        },
-        translateY: () => {
-            return anime.random(-10, 10);
-        },
-        complete: animation,
-    });
-};
-animation();
+// let animation = () => {
+//     anime({
+//         targets: h1El,
+//         opacity: 1,
+//         rotate: {
+//             value: 360,
+//             duration: 2000,
+//             easing: 'easeInExpo'
+//         },
+//         scale: anime.stagger([0.7, 1], {from: 'center'}),
+//         delay: anime.stagger(100, {start: 1500}),
+//         translateX: () => {
+//             return anime.random(-20, 20);
+//         },
+//         translateY: () => {
+//             return anime.random(-10, 10);
+//         },
+//         complete: animation,
+//     });
+// };
+// animation();
 // let titleSlideShowAnime = () => {
 //     anime({
 //         targets: '.titleAnime',
@@ -67,3 +66,35 @@ animation();
 //     });
 // };
 // animateBlocks();
+// var relativeEl = document.querySelector('.animateForLanding');
+// relativeEl.style.transform = 'translateX(100px)';
+//
+// anime({
+//     targets: '.animateForLanding',
+//     translateX: {
+//         value: '*=2.5', // 100px * 2.5 = '250px'
+//         duration: 1000
+//     },
+//     width: {
+//         value: '-=20px', // 28 - 20 = '8px'
+//         duration: 1800,
+//         easing: 'easeInOutSine'
+//     },
+//     rotate: {
+//         value: '+=2turn', // 0 + 2 = '2turn'
+//         duration: 1800,
+//         easing: 'easeInOutSine'
+//     },
+//     loop: true,
+//     direction: 'alternate'
+// });
+// let animateForLanding = () => {
+//     anime({
+//         targets: '.animateForLanding',
+//         translateX: 250,
+//         direction: 'alternate',
+//         easing: 'linear'
+//     });
+// };
+// animateForLanding();
+

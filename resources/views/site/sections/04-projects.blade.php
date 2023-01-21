@@ -1,8 +1,8 @@
 <div class="container-fluid bg-gradiant-3 py-5 reveal-content">
     <div class="container overflow-hidden">
         <div class="d-flex justify-content-between">
-            <h1 class="text-white animEffect">پروژه های ما</h1>
-            <p class="text-white animEffect">
+            <h1 class="text-white animateForLanding">پروژه های ما</h1>
+            <p class="text-white animateForLanding">
                 <a href="{{route('site.projects.index')}}"
                    class="btn btn-outline-light btn-sm rounded-pill px-5 py-2">نمایش همه ی پروژه ها</a>
             </p>

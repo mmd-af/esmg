@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-12 col-lg-8">
                 <div class="row my-2 overflow-hidden">
-                    <h1 class="text-white animEffect">چرا ارم صنعت موج گستر...؟</h1>
+                    <h1 class="text-white animateForLanding">چرا ارم صنعت موج گستر...؟</h1>
                     <div id="20637400745" class="mt-5">
                         <script type="text/JavaScript"
                                 src="https://www.aparat.com/embed/UYCgR?data[rnddiv]=20637400745&data[responsive]=yes"></script>
@@ -21,7 +21,7 @@
                              style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
-                                    <h3 class="mt-2 animEffect">تجربه و تخصص</h3>
+                                    <h3 class="mt-2 animateForLanding">تجربه و تخصص</h3>
                                     <p>شرکت ارم صنعت موج گستر با دارا بودن تیمی توانمند از
                                         متخصصین و
                                         سابقه فعالیت صنعتی قابل
@@ -36,7 +36,7 @@
                              style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-users fa-2x" aria-hidden="true"></i>
-                                    <h3 class="mt-2 animEffect">کار تیمی مؤثر</h3>
+                                    <h3 class="mt-2 animateForLanding">کار تیمی مؤثر</h3>
                                     <p>فرهنگ سازمانی شرکت ارم صنعت به گونه‌ای پایه‌گذاری شده است
                                         که
                                         تعهد کاری در اولویت
@@ -52,7 +52,7 @@
                              style="border-radius: 30px">
                             <div class="card-body">
                                 <div class="text-center"><i class="fa fa-handshake fa-2x" aria-hidden="true"></i>
-                                    <h5 class="mt-3 animEffect">رضایت مشتری</h5>
+                                    <h5 class="mt-3 animateForLanding">رضایت مشتری</h5>
                                     <p>شرکت ارم صنعت همواره در تلاش است تا با ارائه خدمات تخصصی
                                         به
                                         بهترین شکل ممکن،

@@ -22,7 +22,7 @@
                      alt="{{$slideShow->title}}"
                      style="opacity: 0.5">
                 <div class="carousel-caption text-white">
-                    <h1 class="display-3 titleAnime">{{$slideShow->title}}</h1>
+                    <h1 class="display-3 animateForLanding">{{$slideShow->title}}</h1>
                     <p class="mt-3 descriptAnime">{{Str::limit($slideShow->description,450)}}</p>
                     <a href="{{$slideShow->link}}"
                        class="btn btn-primary btnAnime" style="height: 50px;width: 250px;">{{$slideShow->link_text}}</a>
