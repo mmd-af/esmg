@@ -4,7 +4,8 @@
         <div class="row">
             @foreach ($customers as $customer)
                 <div class="col-xs-6 col-md-4 col-lg-3 text-center p-5 content-zoom">
-                    <img class="img-fluid w-50 rounded-circle border border-3 border-primary-1"
+                    <img class="img-fluid border border-3 border-primary-1"
+                         style="width: 100px;height: 100px;border-radius: 50%"
                          src="{{ $customer->images->url }}"
                          alt="{{ $customer->title }}">
                     <h6>{{$customer->title}}</h6>

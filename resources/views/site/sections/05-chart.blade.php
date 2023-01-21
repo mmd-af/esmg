@@ -38,7 +38,7 @@
                 },
                     {
                         label: "ESMG Product",
-                        data: [28, 48, 40, 19, 96, 27, 80],
+                        data: [28, 48, 65, 60, 70, 55, 70],
                         backgroundColor: [
                             'rgba(0, 250, 220, .2)',
                         ],

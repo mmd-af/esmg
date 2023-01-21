@@ -12,7 +12,7 @@
         </div>
         <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg text-white">
             <div class="p-4">
-{{--                <i class="fas fa-hashtag fa-3x"></i>--}}
+                {{--                <i class="fas fa-hashtag fa-3x"></i>--}}
                 <i class="fas fa-phone fa-3x"></i>
             </div>
             <ul class="list-unstyled mb-md-4 mb-lg-0 content-zoom">
@@ -43,9 +43,38 @@
         </div>
     </div>
     <hr/>
-    <div class="row flex-center pb-3">
-        <div class="col-md-6 order-0 content-zoom">
-            <p class="text-200 text-center text-md-start text-white">Copyright &copy; esmg.co.ir {{date('Y')}} - طراحی و توسعه - شرکت ایده پردازان آریو وب</p>
+    <div class="row text-center pb-3">
+        <p class="text-white">
+            Copyright &copy; esmg.co.ir {{date('Y')}}
+            - طراحی و توسعه:
+            <a class="link-info" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                شرکت ایده پردازان آریو وب
+            </a>
+        </p>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="d-flex justify-content-between p-3">
+                <h5 class="modal-title" id="exampleModalLabel">معرفی شرکت طراح</h5>
+                <a type="button" class="text-danger" data-bs-dismiss="modal">
+                    <i class="fas fa-times-circle"></i>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque, aut consequatur consequuntur
+                        distinctio facere labore laboriosam maiores obcaecati officiis omnis quas quibusdam quos
+                        repellat repudiandae sint tempora velit voluptatibus.
+                    </div>
+                    <div class="col-md-4">
+                        <img class="rounded-circle img-fluid" width="100px"
+                             src="http://127.0.0.1:8000/storage/photos/1/348s.jpg" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
