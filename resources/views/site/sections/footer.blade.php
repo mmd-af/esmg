@@ -1,5 +1,5 @@
 <div class="container-fluid bg-gradiant-1 reveal-content">
-    <div class="row">
+    <div class="row text-center">
         <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
             <div class="text-white p-4">
                 <i class="fas fa-address-book fa-3x"></i>

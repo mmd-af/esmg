@@ -15,11 +15,8 @@
     @include('site.sections.04-projects')
 
     @include('site.sections.05-chart')
+    @include('site.sections.05-counter')
 
     @include('site.sections.06-our-customers')
-
-@endsection
-
-@section('script')
 
 @endsection

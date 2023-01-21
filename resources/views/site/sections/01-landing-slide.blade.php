@@ -1,9 +1,16 @@
 <div id="landingSlideShowDark1" class="carousel carousel-dark slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
+    <div class="carousel-indicators bg-white rounded-pill">
         @foreach($slideShows as $key=> $slideShow)
-            <button type="button" data-bs-target="#carouselExampleDark1" data-bs-slide-to="{{$loop->count-($key+1)}}"
-                    @if($loop->first) class="active" aria-current="true" @endif aria-label="Slide {{$loop->count-($key+1)}}"
-                    class="bg-primary py-2"></button>
+            <button type="button" data-bs-target="#landingSlideShowDark1" data-bs-slide-to="{{$loop->count-($key+1)}}"
+                    @if($loop->iteration ==1 )
+                    class="active bg-primary py-2"
+                    @else
+                    class="bg-primary py-2"
+                    @endif
+                    aria-current="true"
+                    aria-label="Slide {{$loop->count-($key+1)}}"
+            >
+            </button>
         @endforeach
     </div>
     <div class="carousel-inner">
