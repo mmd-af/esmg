@@ -16,7 +16,7 @@ class CategoryRepository extends BaseRepository
 
     public function getAll()
     {
-        return Category::query()
+        return $this->query()
             ->select([
                 'id',
                 'title',
@@ -29,7 +29,7 @@ class CategoryRepository extends BaseRepository
 
     public function getLatest()
     {
-        return Category::query()
+        return $this->query()
             ->select([
                 'id',
                 'title',
@@ -46,7 +46,7 @@ class CategoryRepository extends BaseRepository
 
     public function getCategoryByType($type)
     {
-        return Category::query()
+        return $this->query()
             ->select([
                 'id',
                 'title',
@@ -61,7 +61,7 @@ class CategoryRepository extends BaseRepository
 
     public function getCategoryByParent($type)
     {
-        return Category::query()
+        return $this->query()
             ->select([
                 'id',
                 'title',
