@@ -16,6 +16,7 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->string('project_name');
+            $table->string('slug')->unique();
             $table->string('employer_name')->nullable();
             $table->string('project_location');
             $table->string('customer_image')->nullable();
@@ -23,6 +24,10 @@ class CreateProjectsTable extends Migration
             $table->string('logo_image');
             $table->text('description');
             $table->string('year_enforce');
+            $table->string('interval')->nullable();
+            $table->string('selected')->nullable();
+            $table->boolean('is_active')->default(1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

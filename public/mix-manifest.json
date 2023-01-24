@@ -3,6 +3,9 @@
     "/js/admin.js": "/js/admin.js",
     "/css/site.css": "/css/site.css",
     "/css/admin.css": "/css/admin.css",
+    "/js/admin.js.LICENSE.txt": "/js/admin.js.LICENSE.txt",
+    "/js/site.js.LICENSE.txt": "/js/site.js.LICENSE.txt",
+    "/js/scrollreveal.js": "/js/scrollreveal.js",
     "/js/ckeditor/adapters/jquery.js": "/js/ckeditor/adapters/jquery.js",
     "/js/ckeditor/bender-runner.config.json": "/js/ckeditor/bender-runner.config.json",
     "/js/ckeditor/build-config.js": "/js/ckeditor/build-config.js",
@@ -398,6 +401,5 @@
     "/js/ckeditor/skins/moono-dark/images/refresh.png": "/js/ckeditor/skins/moono-dark/images/refresh.png",
     "/js/ckeditor/skins/moono-dark/readme.md": "/js/ckeditor/skins/moono-dark/readme.md",
     "/js/ckeditor/styles.js": "/js/ckeditor/styles.js",
-    "/js/ckeditor/vendor/promise.js": "/js/ckeditor/vendor/promise.js",
-    "/js/scrollreveal.js": "/js/scrollreveal.js"
+    "/js/ckeditor/vendor/promise.js": "/js/ckeditor/vendor/promise.js"
 }
