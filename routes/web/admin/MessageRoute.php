@@ -17,6 +17,10 @@ Route::group(['middleware' => ['web', 'auth', 'AdminTeach'], 'namespace' => 'App
                 'as' => 'markMessage',
                 'uses' => 'MessageAjaxController@markMessage'
             ]);
+            Route::delete('/{message}/deleteMessage', [
+                'as' => 'deleteMessage',
+                'uses' => 'MessageAjaxController@deleteMessage'
+            ]);
         });
     });
 });

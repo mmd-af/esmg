@@ -50,4 +50,11 @@ class MessageRepository extends BaseRepository
             $message->save();
         }
     }
+
+    public function deleteMessage($message)
+    {
+        $messages = $this->query()
+            ->find($message);
+        $messages->delete();
+    }
 }

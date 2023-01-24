@@ -79,7 +79,7 @@
                     {{--let catLink = '{{ route('site.categories.show', ':slug') }}';--}}
                     {{--catLink = catLink.replace(':slug', data.slug);--}}
                     let messageData = `
-        <a class="dropdown-item d-flex justify-content-between" href="#">
+        <div class="dropdown-item d-flex justify-content-between" href="#">
                     <div>
                         <div class="small text-gray-500">${data.phone}</div>
                         <span class="font-weight-bold">${data.description}</span>
@@ -87,11 +87,13 @@
 
                     <div class="mr-3">
                         <div class="icon-circle bg-primary">
-                            <i class="fas fa-file-alt text-white"></i>
+                           <a style="cursor: pointer" onclick="deleteMessage(${data.id})">
+                            <i class="fas fa-trash-alt text-danger"></i>
+                           </a>
                         </div>
                     </div>
 
-                </a>`;
+                </div>`;
                     setMessage.innerHTML += messageData;
                 })
             }
@@ -118,6 +120,24 @@
             }
         }
     });
+</script>
+<script>
+    function deleteMessage(id) {
+        var url = "{{ route('admin.messages.ajax.deleteMessage', ":id") }}";
+        url = url.replace(':id', id);
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: 'delete',
+            url: url,
+            success: function (response) {
+                alert('پاک شد');
+            }
+        });
+    }
 </script>
 
 <script>
