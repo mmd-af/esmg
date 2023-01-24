@@ -148,9 +148,21 @@ body {
 
 @keyframes mymove {
     from {
-        bottom: 150px;
+        bottom: 100px;
     }
     to {
         bottom: 0px;
     }
+}
+
+.container-fluid-xxl {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

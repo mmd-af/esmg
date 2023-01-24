@@ -1,25 +1,5 @@
 @extends('site.layouts.index')
 
-@section('style')
-    <style>
-        .hideHeader {
-            display: none;
-        }
-
-        .container-fluid-xxl {
-            position: relative;
-            text-align: center;
-        }
-
-        .centered {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
-@endsection
-
 @section('content')
     <div class="container-fluid-xxl bg-dark" style="display: block;height: 400px;overflow: hidden;">
         <img class="w-100" src="{{ $project->primary_image }}" alt="Snow"

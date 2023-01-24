@@ -12,28 +12,9 @@
     <meta name="theme-color" content="#ccffff">
     <link href="{{asset('css/site.css')}}" rel="stylesheet"/>
     @yield('style')
-    <style>
-        .container-fluid-xxl {
-            position: relative;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
 @include('site.sections.navbar')
-{{--<div class="container hideHeader pb-3 my-3 text-white text-center content-zoom">--}}
-{{--    <div class="titleEffect">--}}
-{{--        <span class="letter">ارم</span>--}}
-{{--        <span class="letter">صنعت</span>--}}
-{{--        <span class="letter">موج</span>--}}
-{{--        <span class="letter">گستر</span>--}}
-{{--        <div></div>--}}
-{{--        <span class="letter display-1">ESMG</span>--}}
-{{--        <div></div>--}}
-{{--        <span class="letter small">دانش</span>--}}
-{{--        <span class="letter small">بنیان</span>--}}
-{{--    </div>--}}
-{{--</div>--}}
 @yield('content')
 @include('site.sections.footer')
 @include('site.sections.chat')
@@ -123,7 +104,6 @@
 </script>
 <script>
     const counters = document.querySelectorAll(".counter");
-
     counters.forEach((counter) => {
         counter.innerText = "0";
         const updateCounter = () => {
@@ -132,7 +112,7 @@
             const increment = target / 200;
             if (count < target) {
                 counter.innerText = `${Math.ceil(count + increment)}`;
-                setTimeout(updateCounter, 1);
+                setTimeout(updateCounter, 30);
             } else counter.innerText = target;
         };
         updateCounter();

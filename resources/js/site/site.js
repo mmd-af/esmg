@@ -2,7 +2,6 @@ window.$ = window.jQuery = require("jquery");
 require("./bootstrap");
 require('./bootstrap.bundle.min');
 window.anime = require('animejs/lib/anime.min');
-require('./customjs');
 require('./chat');
 window.Swal = require('sweetalert2');
 $(window).scroll(function () {
@@ -12,3 +11,6 @@ $(window).scroll(function () {
         $('.sticky-top').css('top', '-100px');
     }
 });
+
+window.WOW = require('wow.js');
+new WOW().init();
