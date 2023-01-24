@@ -56,8 +56,8 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-            <div class="d-flex justify-content-between p-3">
-                <h5 class="modal-title" id="exampleModalLabel">معرفی شرکت طراح</h5>
+            <div class="d-flex justify-content-between p-3 bg-primary-1">
+                <h6 class="modal-title text-white" id="exampleModalLabel">معرفی شرکت طراح</h6>
                 <a type="button" class="text-danger" data-bs-dismiss="modal">
                     <i class="fas fa-times-circle"></i>
                 </a>
@@ -65,13 +65,16 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-8">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad atque, aut consequatur consequuntur
-                        distinctio facere labore laboriosam maiores obcaecati officiis omnis quas quibusdam quos
-                        repellat repudiandae sint tempora velit voluptatibus.
+                        <h2>ایده پردازان آریو وب</h2>
+                        <p>
+                            شرکت ایده پردازان آریو وب فعال در زمینه برنامه نویسی، طراحی سایت، طراحی اپلیکیشن های موبایل
+                        </p>
+                        <p><strong>شماره تماس:</strong></p>
+                        09178776773 - 09177165426
                     </div>
                     <div class="col-md-4">
                         <img class="rounded-circle img-fluid" width="100px"
-                             src="http://127.0.0.1:8000/storage/photos/1/348s.jpg" alt="">
+                             src="{{asset('img/gallery/arioweb.jpg')}}" alt="ایده پردازان آریو وب">
                     </div>
                 </div>
             </div>

@@ -92,6 +92,8 @@
                 title: 'متشکریم...',
                 text: 'پیام شما با موفقیت ارسال شد.'
             });
+            $("input[name=phone]").val('');
+            $("textarea[name=description]").val('');
             closeChat.click();
         }).fail(function () {
             Swal.fire({
