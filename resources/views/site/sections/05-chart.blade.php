@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row bg-white p-5" style="border-radius: 30px">
             <div class="col-sm-12 col-md-8">
-                <h1 class="animateForLanding">مقایسه محصول</h1>
-                <img class="img-fluid" src="http://127.0.0.1:8000/storage/photos/1/IMG_3922.JPG" alt="">
+                <h1 class="text-primary-1 animateForLanding">مقایسه محصول</h1>
+                <img class="img-fluid" src="http://127.0.0.1:8000/img/favicons/favicon.ico" alt="">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias facilis fugit maiores pariatur, porro
                 praesentium repellat. Dignissimos eligendi enim est eum, facere numquam odit quas quos ratione, tempore
                 velit vero.

@@ -114,7 +114,7 @@
             const increment = target / 200;
             if (count < target) {
                 counter.innerText = `${Math.ceil(count + increment)}`;
-                setTimeout(updateCounter, 30);
+                setTimeout(updateCounter, 10);
             } else counter.innerText = target;
         };
         updateCounter();

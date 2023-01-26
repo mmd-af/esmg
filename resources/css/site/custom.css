@@ -10,47 +10,11 @@
 body {
     font-family: 'IRANSansWeb', system-ui;
     direction: rtl;
-    background-image: url("../../img/site/esmg-bg.jpg");
+    background-image: url("../../img/site/esmg-bg.png");
     background-size: 100%;
     /*background-repeat: no-repeat;*/
     background-attachment: fixed;
 }
-
-/*@media (max-width: 576px) {*/
-/*    .slide-show-img-fix {*/
-/*        display: block;*/
-/*        width: 100% !important;*/
-/*        height: 220px;*/
-/*        overflow: hidden;*/
-/*    }*/
-/*}*/
-
-/*@media (max-width: 768px) {*/
-/*    .slide-show-img-fix {*/
-/*        display: block;*/
-/*        width: 100% !important;*/
-/*        height: 400px;*/
-/*        overflow: hidden;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 769px) {*/
-/*    .slide-show-img-fix {*/
-/*        display: block;*/
-/*        width: 100% !important;*/
-/*        height: 550px;*/
-/*        overflow: hidden;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 992px) {*/
-/*    .slide-show-img-fix {*/
-/*        display: block;*/
-/*        width: 100% !important;*/
-/*        height: 720px;*/
-/*        overflow: hidden;*/
-/*    }*/
-/*}*/
 
 .text-primary-1 {
     color: #006666 !important
