@@ -1,29 +1,46 @@
 <div class="container-fluid bg-gradiant-1 reveal-content">
-    <div class="row text-center">
+    <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
-            <div class="text-white p-4">
+            <div class="text-white p-4 text-center">
                 <i class="fas fa-address-book fa-3x"></i>
             </div>
-            <ul class="list-unstyled mb-md-4 mb-lg-0 text-white content-zoom">
+            <ul class="list-unstyled mx-5 text-white content-zoom">
                 <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 09108430173</li>
                 <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 09177398308</li>
                 <li class="lh-lg"><i class="fas fa-phone-square text-white"></i> 071-36240650</li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg text-white">
-            <div class="p-4">
-                {{--                <i class="fas fa-hashtag fa-3x"></i>--}}
+            <div class="text-white p-4 text-center">
                 <i class="fas fa-phone fa-3x"></i>
             </div>
-            <ul class="list-unstyled mb-md-4 mb-lg-0 content-zoom">
-                <li class="lh-lg"><i class="fas fa-envelope text-white"></i> info@esmg.co.ir</li>
-                <li class="lh-lg"><i class="fab fa-instagram"></i> esmg@</li>
-                <li class="lh-lg"><i class="fab fa-linkedin"></i> esmg</li>
-                <li class="lh-lg"><i class="fab fa-whatsapp"></i> 09376925054</li>
+            <ul class="list-unstyled mx-5 content-zoom">
+                <li class="lh-lg">
+                    <a class="nav-link link-info" href="https://www.instagram.com/esmgco/" target="_blank">
+                        <i class="fab fa-instagram text-white"></i> esmgco@
+                    </a>
+                </li>
+                <li class="lh-lg">
+                    <a class="nav-link link-info" href="https://wa.me/989376925054"
+                       target="_blank">
+                        <i class="fab fa-whatsapp text-white"></i> 09376925054
+                    </a>
+                </li>
+                <li class="lh-lg">
+                    <a class="nav-link link-info" href="mailto:info@esmg.co.ir" target="_blank">
+                        <i class="fas fa-envelope text-white"></i> info@esmg.co.ir
+                    </a>
+                </li>
+                <li class="lh-lg">
+                    <a class="nav-link link-info" href="https://www.linkedin.com/company/eram-sanat-mooj-gostar/"
+                       target="_blank">
+                        <i class="fab fa-linkedin text-white"></i> eram-sanat-mooj-gostar
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
-            <div class="text-white p-4">
+            <div class="text-white p-4 text-center">
                 <i class="fas fa-map-marker-alt fa-3x"></i>
             </div>
             <ul class="list-unstyled mb-md-4 mb-lg-0 content-zoom text-white">
@@ -32,7 +49,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg">
+        <div class="col-sm-12 col-md-4 col-lg-3 mb-3 shadow-lg text-center">
             <div class="text-white p-4">
                 <i class="fas fa-map fa-3x"></i>
             </div>

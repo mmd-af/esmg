@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\ProjectImageController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::prefix('adminindex')->middleware(['auth', 'AdminTeach'])->group(function () {
+Route::prefix('adminindex')->middleware(['auth', 'super.admin'])->group(function () {
 
     Route::resource('projects', ProjectController::class);
 
@@ -20,7 +20,7 @@ Route::prefix('adminindex')->middleware(['auth', 'AdminTeach'])->group(function 
 });
 
 
-Route::group(['middleware' => ['web', 'auth', 'AdminTeach'], 'namespace' => 'App\Http\Controllers\Admin\Project'], function () {
+Route::group(['middleware' => ['web', 'auth', 'super.admin'], 'namespace' => 'App\Http\Controllers\Admin\Project'], function () {
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::group(['middleware' => ['is.ajax'], 'prefix' => 'projects-ajax', 'as' => 'projects.ajax.'], function () {
             Route::post('/setSelected', [
