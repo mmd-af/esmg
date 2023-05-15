@@ -3,13 +3,20 @@
         <div class="row bg-white p-5" style="border-radius: 30px">
             <div class="col-sm-12 col-md-8">
                 <h1 class="text-primary-1 animateForLanding">مقایسه محصول</h1>
-                <img class="img-fluid" src="http://127.0.0.1:8000/img/favicons/favicon.ico" alt="">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias facilis fugit maiores pariatur, porro
-                praesentium repellat. Dignissimos eligendi enim est eum, facere numquam odit quas quos ratione, tempore
-                velit vero.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, necessitatibus reprehenderit?
-                Aperiam deleniti dicta eius facere nulla obcaecati possimus rerum sint sunt ut! Doloribus hic minima
-                possimus praesentium quasi sint!
+                <img class="img-fluid" src="http://127.0.0.1:8000/img/favicons/favicon.ico" alt="esmg logo">
+                <p>
+                    محصولات الکتریکی متنوعی از جمله مبدل های DC-DC و AC-DC توسط این شرکت طراحی و تولید می شوند. مبدل های
+                    تولیدی این شرکت کارآمد، قابل اعتماد و بادوام هستند و کاربرد وسیعی در صنایع مختلف دارند. از نظر کیفیت
+                    و
+                    عملکرد، مبدل های ما نسبت به رقبای خارجی دارای عملکرد قابل قبولی میباشند. برای اطمینان از ایمنی و
+                    عملکرد
+                    مناسب محصول در طول روند تولید از روش های مهندسی پیشرفته استفاده می شود.با توجه به عملکرد محصولات در
+                    شرایط سخت کاربرد محصولات مناسب استفاده در صنایع مختلف شامل صنایع نفت و گاز، حمل ونقل، خدمات شهری می
+                    باشند.آموزش های لازم و مشاوره های مورد نیاز در خصوص نحوه استفاده ایمن و موثر از مبدل ها به مشتریان
+                    این
+                    شرکت به صورت کامل ارئه می گردد و همچنین با توجه به کیفیت ساخت محصولات و قابلیت رقابت با نمونه خارجی
+                    امکان ارائه گارانتی معتبر و طولانی مدت وجود دارد.
+                </p>
             </div>
             <div class="col-sm-12 col-md-4 content-zoom">
                 <canvas id="radarChart"></canvas>

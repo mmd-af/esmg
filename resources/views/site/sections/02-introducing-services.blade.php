@@ -5,7 +5,7 @@
             <div class="col-sm-12 col-lg-4">
                 <div class="card rounded-3 card-span shadow content-zoom">
                     <img class="img-fluid"
-                         src="{{asset('img/favicons/favicon.ico')}}"
+                         src="https://esmg.co.ir/photos/shares/esmg.jpg"
                          alt="">
                 </div>
             </div>
@@ -42,10 +42,11 @@
                     <div class="col-sm-12 col-md-6 my-2 content-zoom">
                         <div class="card rounded-3 card-span shadow p-4 h-100 border-top">
                             <h2 class="text-primary-1 animateForLanding">آموزش و مشاوره</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores consequatur,
-                                debitis dolorum ducimus explicabo illum inventore ipsam iste modi mollitia, numquam,
-                                porro
-                                quaerat quas quasi quis rem totam vel? </p>
+                            <p>این شرکت به مشتریان خود مشاوره و آموزش می دهد تا اطمینان حاصل شود که آنها از تجهیزات
+                                الکتریکی به طور ایمن و مؤثر استفاده می کنند. موضوعات مختلفی از جمله ایمنی الکتریکی،
+                                تعمیر و نگهداری و عیب یابی در آموزش پوشش داده شده است. کارشناسان این شرکت همچنین خدمات
+                                مشاوره ای را برای کمک به مشتریان در انتخاب کالاها و خدمات ایده آل برای نیازهای خاص خود
+                                ارائه می دهند.</p>
                         </div>
                     </div>
                 </div>
